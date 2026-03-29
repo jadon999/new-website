@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact YourBrand | Get a Free Website Design Quote in India</title>
+  <meta name="description" content="Contact YourBrand for a free website design consultation. Tell us about your project and get a custom quote within 24 hours. Professional web design services across India." />
+  <meta name="keywords" content="contact website design agency India, get website design quote India, hire web designer India, website design inquiry" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/contact.html" />
+
+  <meta property="og:title" content="Contact YourBrand | Free Website Design Quote" />
+  <meta property="og:description" content="Get a free consultation and custom quote for your website design project. We respond within 24 hours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourbrand.in/contact.html" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Contact-specific styles ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 40px 36px;
+      position: sticky;
+      top: 110px;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .contact-info-item:last-child { border-bottom: none; }
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      background: rgba(200,169,110,0.05);
+    }
+    .contact-info-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .contact-info-value {
+      font-size: 0.9rem;
+      color: var(--white);
+      line-height: 1.6;
+    }
+    .contact-info-value a { color: var(--white); transition: color var(--transition-fast); }
+    .contact-info-value a:hover { color: var(--gold); }
+
+    /* Form */
+    .contact-form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 44px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .form-group:last-child { margin-bottom: 0; }
+    .form-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white-dim);
+    }
+    .form-label .required { color: var(--gold); margin-left: 2px; }
+    .form-input,
+    .form-select,
+    .form-textarea {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 13px 16px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--white);
+      transition: var(--transition);
+      width: 100%;
+      outline: none;
+      appearance: none;
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: var(--white-dim); }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold);
+      background: rgba(200,169,110,0.04);
+      box-shadow: 0 0 0 3px rgba(200,169,110,0.08);
+    }
+    .form-select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+    .form-select option { background: var(--bg-card); color: var(--white); }
+    .form-textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 0.88rem;
+      letter-spacing: 0.14em;
+      margin-top: 8px;
+      justify-content: center;
+    }
+
+    .form-privacy {
+      font-size: 0.75rem;
+      color: var(--white-dim);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+    .form-privacy a { color: var(--gold); }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .form-success-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .form-success h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: var(--gold);
+    }
+    .form-success p { color: var(--white-muted); }
+
+    /* Why contact us boxes */
+    .why-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .why-contact-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .why-contact-item:hover {
+      border-color: var(--border);
+      transform: translateY(-3px);
+    }
+    .why-contact-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+    .why-contact-item h4 { font-size: 1rem; margin-bottom: 8px; }
+    .why-contact-item p { font-size: 0.85rem; color: var(--white-dim); line-height: 1.65; }
+
+    @media (max-width: 1024px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-info-card { position: static; }
+    }
+    @media (max-width: 768px) {
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .contact-form-card { padding: 32px 24px; }
+      .contact-info-card { padding: 28px 24px; }
+      .why-contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact YourBrand",
+    "url": "https://yourbrand.in/contact.html",
+    "description": "Contact YourBrand for professional website design services in India.",
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://yourbrand.in/#organization",
+      "name": "YourBrand",
+      "email": "hello@yourbrand.in",
+      "telephone": "+91-98765-43210",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="website-designing-services.html">Services</a>
+    <a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════ PAGE HERO ══════════════════════ -->
+    <section class="page-hero" aria-label="Contact hero">
+      <div class="page-hero-bg"></div>
+      <div class="page-hero-grid"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>Contact Us</span>
+          </nav>
+
+          <div class="hero-eyebrow reveal">Get in Touch</div>
+          <h1 class="reveal reveal-delay-1">
+            Let's Build Something<br>
+            <em>Exceptional Together</em>
+          </h1>
+          <p class="hero-subtitle reveal reveal-delay-2">
+            Ready to elevate your online presence? Share your project details below and our team will get back to you within 24 hours with a tailored strategy and transparent quote.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ CONTACT SECTION ══════════════════════ -->
+    <section class="bg-alt" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT: Contact Info -->
+          <div class="reveal">
+            <div class="section-label">Contact Information</div>
+            <h2 id="contact-form-heading" class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);">We'd Love to<br><em>Hear From You</em></h2>
+            <div class="gold-line"></div>
+            <p style="margin-bottom:32px;">Whether you're ready to start a project today or just exploring your options, we're here to help. Reach out and let's have an honest conversation about your goals.</p>
+
+            <div class="contact-info-card">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">📧</div>
+                <div>
+                  <div class="contact-info-label">Email Us</div>
+                  <div class="contact-info-value"><a href="mailto:hello@yourbrand.in">hello@yourbrand.in</a></div>
+                  <div class="contact-info-value" style="font-size:0.78rem;color:var(--white-dim);margin-top:3px;">We reply within 24 hours on business days</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">📞</div>
+                <div>
+                  <div class="contact-info-label">Call / WhatsApp</div>
+                  <div class="contact-info-value"><a href="tel:+919876543210">+91 98765 43210</a></div>
+                  <div class="contact-info-value" style="font-size:0.78rem;color:var(--white-dim);margin-top:3px;">Mon – Sat, 9 AM – 7 PM IST</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">📍</div>
+                <div>
+                  <div class="contact-info-label">Location</div>
+                  <div class="contact-info-value">India</div>
+                  <div class="contact-info-value" style="font-size:0.78rem;color:var(--white-dim);margin-top:3px;">Serving businesses across all Indian cities</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon">⏱️</div>
+                <div>
+                  <div class="contact-info-label">Response Time</div>
+                  <div class="contact-info-value">Within 24 Business Hours</div>
+                  <div class="contact-info-value" style="font-size:0.78rem;color:var(--white-dim);margin-top:3px;">We take every enquiry seriously</div>
+                </div>
+              </div>
+
+              <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border-subtle);">
+                <div class="contact-info-label" style="margin-bottom:14px;">Our Services</div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <a href="website-designing-services.html" style="font-size:0.82rem;color:var(--white-dim);display:flex;align-items:center;gap:8px;transition:color var(--transition-fast);" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white-dim)'"><span style="color:var(--gold);">→</span> Website Designing Services</a>
+                  <a href="wordpress-website-design-services.html" style="font-size:0.82rem;color:var(--white-dim);display:flex;align-items:center;gap:8px;transition:color var(--transition-fast);" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white-dim)'"><span style="color:var(--gold);">→</span> WordPress Website Design</a>
+                  <a href="ecommerce-website-design.html" style="font-size:0.82rem;color:var(--white-dim);display:flex;align-items:center;gap:8px;transition:color var(--transition-fast);" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white-dim)'"><span style="color:var(--gold);">→</span> Ecommerce Website Design</a>
+                  <a href="custom-website-design.html" style="font-size:0.82rem;color:var(--white-dim);display:flex;align-items:center;gap:8px;transition:color var(--transition-fast);" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white-dim)'"><span style="color:var(--gold);">→</span> Custom Website Design</a>
+                  <a href="website-design-cost-india.html" style="font-size:0.82rem;color:var(--white-dim);display:flex;align-items:center;gap:8px;transition:color var(--transition-fast);" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white-dim)'"><span style="color:var(--gold);">→</span> View Pricing Guide</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Contact Form -->
+          <div class="reveal reveal-delay-2">
+            <div class="contact-form-card">
+              <div style="margin-bottom:32px;">
+                <div class="section-label">Project Enquiry</div>
+                <h3 style="font-size:1.5rem;margin-bottom:8px;">Get Your Free<br><em class="text-gold">Website Design Quote</em></h3>
+                <p style="font-size:0.875rem;color:var(--white-dim);">Fill in the form below and we'll get back to you with a personalised strategy and transparent quote within 24 hours.</p>
+              </div>
+
+              <!-- Form -->
+              <form id="contactForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Rajesh" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Sharma" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="rajesh@yourbusiness.com" required />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="phone">Phone / WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="company">Business Name</label>
+                    <input type="text" id="company" name="company" class="form-input" placeholder="Your Business Name" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="service">Service Required <span class="required">*</span></label>
+                  <select id="service" name="service" class="form-select" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="website-design">Website Designing Services</option>
+                    <option value="wordpress">WordPress Website Design</option>
+                    <option value="ecommerce">Ecommerce Website Design</option>
+                    <option value="custom">Custom Website Design</option>
+                    <option value="landing-page">Landing Page Design</option>
+                    <option value="redesign">Website Redesign</option>
+                    <option value="business">Business Website Design</option>
+                    <option value="small-business">Small Business Website</option>
+                    <option value="portfolio">Portfolio Website Design</option>
+                    <option value="other">Other / Not Sure Yet</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="budget">Approximate Budget</label>
+                  <select id="budget" name="budget" class="form-select">
+                    <option value="" disabled selected>Select your budget range...</option>
+                    <option value="under-20k">Under ₹20,000</option>
+                    <option value="20k-50k">₹20,000 – ₹50,000</option>
+                    <option value="50k-1l">₹50,000 – ₹1,00,000</option>
+                    <option value="1l-2l">₹1,00,000 – ₹2,00,000</option>
+                    <option value="above-2l">Above ₹2,00,000</option>
+                    <option value="flexible">Flexible / Need Guidance</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Tell Us About Your Project <span class="required">*</span></label>
+                  <textarea id="message" name="message" class="form-textarea" placeholder="Describe your business, what you're looking for in a website, any specific features, your target audience, or any other details that would help us understand your project..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-gold btn-arrow form-submit">
+                  Send My Enquiry
+                </button>
+
+                <p class="form-privacy">🔒 Your information is 100% secure and will never be shared with third parties. By submitting, you agree to our <a href="#">Privacy Policy</a>.</p>
+              </form>
+
+              <!-- Success State -->
+              <div class="form-success" id="formSuccess">
+                <div class="form-success-icon">✅</div>
+                <h3>Enquiry Received!</h3>
+                <p>Thank you for reaching out. Our team will review your project details and get back to you within 24 business hours with a personalised strategy and quote.</p>
+                <div class="mt-24">
+                  <a href="website-designing-services.html" class="btn btn-outline" style="margin:0 auto;">Explore Our Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ WHY CONTACT US ══════════════════════ -->
+    <section aria-labelledby="why-contact-heading">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <div class="section-label">Why Reach Out</div>
+          <h2 id="why-contact-heading" class="section-title">What Happens When You<br><em>Contact YourBrand</em></h2>
+          <div class="gold-line center"></div>
+        </div>
+
+        <div class="why-contact-grid stagger-children">
+          <div class="why-contact-item">
+            <div class="why-contact-icon">📋</div>
+            <h4>Free Discovery Session</h4>
+            <p>We start with a thorough consultation to understand your business goals, target audience, and vision — no charge, no obligation.</p>
+          </div>
+          <div class="why-contact-item">
+            <div class="why-contact-icon">💰</div>
+            <h4>Transparent Custom Quote</h4>
+            <p>You receive a detailed, itemised quote tailored to your specific requirements — with no hidden fees or surprise additions.</p>
+          </div>
+          <div class="why-contact-item">
+            <div class="why-contact-icon">🎯</div>
+            <h4>Expert Strategic Advice</h4>
+            <p>Even before a project begins, we share honest insights on what will work best for your business and why — because your success is our reputation.</p>
+          </div>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="mt-40 reveal" style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:36px 40px;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;flex-wrap:wrap;">
+            <div>
+              <div style="font-size:1.6rem;margin-bottom:8px;">✅</div>
+              <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);">No Obligation</div>
+            </div>
+            <div>
+              <div style="font-size:1.6rem;margin-bottom:8px;">⚡</div>
+              <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);">24hr Response</div>
+            </div>
+            <div>
+              <div style="font-size:1.6rem;margin-bottom:8px;">🔒</div>
+              <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);">100% Confidential</div>
+            </div>
+            <div>
+              <div style="font-size:1.6rem;margin-bottom:8px;">🏆</div>
+              <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);">350+ Projects Delivered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ CTA / SUPPORT ══════════════════════ -->
+    <section class="bg-alt" aria-labelledby="support-heading">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <div class="section-label">We're Here to Help</div>
+          <h2 id="support-heading" class="section-title">Not Sure Where to<br><em>Start?</em></h2>
+          <div class="gold-line center"></div>
+          <p class="section-subtitle">If you're unsure what type of website your business needs, or you have questions about the process or pricing — we're happy to guide you. A quick conversation often brings surprising clarity.</p>
+        </div>
+
+        <div class="grid-3 stagger-children">
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">💬</div>
+            <h4>Not Sure What You Need?</h4>
+            <p>That's completely fine. Tell us about your business and your goals — we'll recommend the most suitable website design solution for you.</p>
+            <div class="mt-16">
+              <a href="website-designing-services.html" class="btn btn-ghost" style="font-size:0.75rem;padding:8px 18px;">Explore Services</a>
+            </div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">💰</div>
+            <h4>Wondering About Budget?</h4>
+            <p>Visit our detailed pricing guide to understand website design costs in India before reaching out. It'll help you come prepared.</p>
+            <div class="mt-16">
+              <a href="website-design-cost-india.html" class="btn btn-ghost" style="font-size:0.75rem;padding:8px 18px;">View Pricing</a>
+            </div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">🔄</div>
+            <h4>Need a Redesign?</h4>
+            <p>If your current website is outdated, slow, or not generating results, our redesign service might be exactly what your business needs right now.</p>
+            <div class="mt-16">
+              <a href="website-redesign-services.html" class="btn btn-ghost" style="font-size:0.75rem;padding:8px 18px;">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:hello@yourbrand.in">hello@yourbrand.in</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="website-designing-services.html">Services</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Core Services</div>
+          <ul class="footer-links">
+            <li><a href="website-designing-services.html">Website Designing Services</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Website Design</a></li>
+            <li><a href="custom-website-design.html">Custom Website Design</a></li>
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">More Services</div>
+          <ul class="footer-links">
+            <li><a href="landing-page-design-services.html">Landing Page Design</a></li>
+            <li><a href="business-website-design.html">Business Website Design</a></li>
+            <li><a href="small-business-website-design.html">Small Business Website</a></li>
+            <li><a href="static-website-design.html">Static Website Design</a></li>
+            <li><a href="dynamic-website-design.html">Dynamic Website Design</a></li>
+            <li><a href="portfolio-website-design.html">Portfolio Website Design</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Contact form submit handler
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Basic validation
+        const required = form.querySelectorAll('[required]');
+        let valid = true;
+        required.forEach(field => {
+          field.style.borderColor = '';
+          if (!field.value.trim()) {
+            field.style.borderColor = '#ff5050';
+            valid = false;
+          }
+        });
+
+        if (!valid) return;
+
+        // Simulate submission — show success state
+        const submitBtn = form.querySelector('.form-submit');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>
