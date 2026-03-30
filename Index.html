@@ -9,7 +9,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://yourbrand.in/index.html" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Website Designing Services for Businesses | YourBrand" />
   <meta property="og:description" content="Modern, responsive, and SEO-friendly websites built for Indian businesses." />
   <meta property="og:type" content="website" />
@@ -17,7 +16,6 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Schema: Organization + WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,15 +27,8 @@
         "url": "https://yourbrand.in",
         "logo": "https://yourbrand.in/logo.png",
         "description": "Professional website designing services for businesses across India.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "IN"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "sales",
-          "email": "hello@yourbrand.in"
-        }
+        "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "hello@yourbrand.in" }
       },
       {
         "@type": "WebSite",
@@ -102,44 +93,126 @@
 
   <main>
 
-    <!-- ══════════════════════ HERO ══════════════════════ -->
-    <section class="hero" aria-label="Hero section">
+    <!-- ══════════════════════ HERO — SPLIT LAYOUT ══════════════════════ -->
+    <section class="hero hero-split" aria-label="Hero section">
       <div class="hero-bg"></div>
       <div class="hero-grid-lines"></div>
 
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-eyebrow reveal">Website Designing Services in India</div>
+        <div class="hero-split-inner">
 
-          <h1 class="hero-title reveal reveal-delay-1">
-            Websites That Win<br>
-            <em>Clients &amp; Drive</em><br>
-            Real Growth
-          </h1>
+          <!-- LEFT: Content -->
+          <div class="hero-split-left">
+            <div class="hero-eyebrow reveal">Website Designing Services in India</div>
 
-          <p class="hero-subtitle reveal reveal-delay-2">
-            YourBrand crafts premium, modern, and SEO-friendly websites for businesses across India. From startups to enterprises — we design digital experiences that convert visitors into customers.
-          </p>
+            <h1 class="hero-title reveal reveal-delay-1">
+              Websites That Win<br>
+              <em>Clients &amp; Drive</em><br>
+              Real Growth
+            </h1>
 
-          <div class="hero-actions reveal reveal-delay-3">
-            <a href="contact.html" class="btn btn-gold btn-arrow">Start Your Project</a>
-            <a href="website-designing-services.html" class="btn btn-outline">Explore Services</a>
+            <p class="hero-subtitle reveal reveal-delay-2">
+              YourBrand crafts premium, modern, and SEO-friendly websites for businesses across India. From startups to enterprises — we design digital experiences that convert visitors into customers.
+            </p>
+
+            <div class="hero-actions reveal reveal-delay-3">
+              <a href="contact.html" class="btn btn-gold btn-arrow">Start Your Project</a>
+              <a href="website-designing-services.html" class="btn btn-outline">Explore Services</a>
+            </div>
+
+            <div class="hero-stats reveal reveal-delay-4">
+              <div class="hero-stat">
+                <div class="hero-stat-num"><span data-count="350" data-suffix="+">0+</span></div>
+                <div class="hero-stat-label">Websites Delivered</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num"><span data-count="8" data-suffix="+">0+</span></div>
+                <div class="hero-stat-label">Years of Expertise</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num"><span data-count="98" data-suffix="%">0%</span></div>
+                <div class="hero-stat-label">Client Satisfaction</div>
+              </div>
+            </div>
           </div>
 
-          <div class="hero-stats reveal reveal-delay-4">
-            <div class="hero-stat">
-              <div class="hero-stat-num"><span data-count="350" data-suffix="+">0+</span></div>
-              <div class="hero-stat-label">Websites Delivered</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num"><span data-count="8" data-suffix="+">0+</span></div>
-              <div class="hero-stat-label">Years of Expertise</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num"><span data-count="98" data-suffix="%">0%</span></div>
-              <div class="hero-stat-label">Client Satisfaction</div>
+          <!-- RIGHT: Browser Mockup Visual -->
+          <div class="hero-split-right reveal reveal-delay-2">
+            <div class="hero-image-wrap">
+
+              <!-- Floating badge top-left -->
+              <div class="hero-float-card hero-float-card--tl">
+                <div class="hfc-dot"></div>
+                <div>
+                  <div class="hfc-label">Google Ranking</div>
+                  <div class="hfc-val">#1 Position</div>
+                </div>
+              </div>
+
+              <!-- Floating badge bottom-right -->
+              <div class="hero-float-card hero-float-card--br">
+                <div class="hfc-dot" style="background:#4ade80;box-shadow:0 0 8px rgba(74,222,128,0.6);"></div>
+                <div>
+                  <div class="hfc-label">Leads This Month</div>
+                  <div class="hfc-val">+128 Enquiries</div>
+                </div>
+              </div>
+
+              <!-- Browser Window Mockup -->
+              <div class="hero-mockup">
+                <div class="mockup-bar">
+                  <span class="mockup-dot" style="background:#ff5f57;"></span>
+                  <span class="mockup-dot" style="background:#febc2e;"></span>
+                  <span class="mockup-dot" style="background:#28c840;"></span>
+                  <div class="mockup-url">yourbrand.in</div>
+                </div>
+                <div class="mockup-screen">
+                  <div class="ms-nav">
+                    <div class="ms-logo"></div>
+                    <div style="display:flex;gap:8px;">
+                      <div class="ms-pill"></div>
+                      <div class="ms-pill"></div>
+                      <div class="ms-pill"></div>
+                    </div>
+                    <div class="ms-btn"></div>
+                  </div>
+                  <div class="ms-hero">
+                    <div class="ms-eyebrow"></div>
+                    <div class="ms-h1"></div>
+                    <div class="ms-h1 ms-h1--gold"></div>
+                    <div class="ms-h1 ms-h1--short"></div>
+                    <div class="ms-sub" style="margin-top:10px;"></div>
+                    <div class="ms-sub ms-sub--short"></div>
+                    <div style="display:flex;gap:10px;margin-top:14px;">
+                      <div class="ms-cta ms-cta--gold"></div>
+                      <div class="ms-cta ms-cta--outline"></div>
+                    </div>
+                  </div>
+                  <div class="ms-cards">
+                    <div class="ms-card">
+                      <div class="ms-card-icon"></div>
+                      <div class="ms-card-line"></div>
+                      <div class="ms-card-line ms-card-line--short"></div>
+                    </div>
+                    <div class="ms-card">
+                      <div class="ms-card-icon"></div>
+                      <div class="ms-card-line"></div>
+                      <div class="ms-card-line ms-card-line--short"></div>
+                    </div>
+                    <div class="ms-card">
+                      <div class="ms-card-icon"></div>
+                      <div class="ms-card-line"></div>
+                      <div class="ms-card-line ms-card-line--short"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gold glow -->
+              <div class="hero-img-glow"></div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -153,7 +226,6 @@
           <div class="gold-line center"></div>
           <p class="section-subtitle">We don't just build websites. We engineer digital assets that rank on Google, impress your clients, and grow your revenue — built specifically for Indian businesses.</p>
         </div>
-
         <div class="grid-4 stagger-children">
           <div class="card">
             <div class="card-icon">🏆</div>
@@ -188,7 +260,6 @@
           <div class="gold-line"></div>
           <p class="section-subtitle">From simple static sites to complex ecommerce platforms — we have a tailored solution for every type of business in India.</p>
         </div>
-
         <div class="grid-3 stagger-children">
           <div class="service-card">
             <div class="service-card-num">01</div>
@@ -245,7 +316,6 @@
             <a href="responsive-website-design.html">Explore Service →</a>
           </div>
         </div>
-
         <div class="mt-40 text-center reveal">
           <a href="website-designing-services.html" class="btn btn-outline btn-arrow">View All Services</a>
         </div>
@@ -263,7 +333,6 @@
             <p>A beautiful website is only valuable if people can find it. Every website we design at YourBrand is engineered with core SEO principles built in — from clean semantic code to fast load speeds, proper heading hierarchy, and meta optimisation.</p>
             <br>
             <p>We partner with businesses across India to ensure their website doesn't just exist online — it dominates local and national search results, driving organic traffic that converts.</p>
-
             <div class="feature-list mt-24">
               <div class="feature-item">
                 <div class="feature-check">✓</div>
@@ -294,12 +363,10 @@
                 </div>
               </div>
             </div>
-
             <div class="mt-40">
               <a href="contact.html" class="btn btn-gold btn-arrow">Get an SEO-Ready Website</a>
             </div>
           </div>
-
           <div class="split-visual reveal reveal-delay-2">
             <div class="split-visual-inner">
               <div class="split-visual-icon">🔍</div>
@@ -327,7 +394,6 @@
           <h2 id="process-heading" class="section-title">How We Build Your<br><em>Dream Website</em></h2>
           <div class="gold-line center"></div>
         </div>
-
         <div class="process-steps stagger-children">
           <div class="process-step">
             <div class="process-step-num">01</div>
@@ -362,7 +428,6 @@
           <div class="gold-line center"></div>
           <p class="section-subtitle">A selection of digital experiences we've crafted for ambitious Indian businesses across industries.</p>
         </div>
-
         <div class="grid-3 stagger-children">
           <div class="project-card">
             <div class="project-card-inner">
@@ -412,7 +477,6 @@
           <h2 id="stats-heading" class="section-title">Numbers That<br><em>Speak for Themselves</em></h2>
           <div class="gold-line center"></div>
         </div>
-
         <div class="stats-row reveal">
           <div class="stat-box">
             <div class="stat-number" data-count="350" data-suffix="+">0+</div>
@@ -431,8 +495,6 @@
             <div class="stat-label">Industries Served</div>
           </div>
         </div>
-
-        <!-- Testimonials -->
         <div class="grid-3 mt-40 stagger-children">
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
@@ -481,41 +543,25 @@
               <div class="section-label">What You Get</div>
               <p style="font-size:0.85rem;color:var(--white-dim);">Every project includes these essentials as standard — no hidden add-ons, no surprises.</p>
               <div style="display:flex;flex-direction:column;gap:8px;margin-top:20px;width:100%;">
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> Custom Design (No Templates)
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> Fully Responsive &amp; Mobile-First
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> On-Page SEO Optimisation
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> Fast Load Speed (&lt;3s)
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> SSL Certificate &amp; Security
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> Google Analytics Integration
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);">
-                  <span style="color:var(--gold);">✦</span> Post-Launch Support
-                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> Custom Design (No Templates)</div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> Fully Responsive &amp; Mobile-First</div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> On-Page SEO Optimisation</div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> Fast Load Speed (&lt;3s)</div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> SSL Certificate &amp; Security</div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> Google Analytics Integration</div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--white-muted);"><span style="color:var(--gold);">✦</span> Post-Launch Support</div>
               </div>
             </div>
           </div>
-
           <div class="reveal reveal-delay-2">
             <div class="section-label">Benefits</div>
             <h2 id="benefits-heading" class="section-title">Everything You Need to<br><em>Succeed Online</em></h2>
             <div class="gold-line"></div>
             <p>When you invest in a professionally designed website with YourBrand, you're not just paying for a design — you're investing in a complete digital foundation that works for your business around the clock.</p>
-
             <div class="grid-2 mt-40" style="gap:24px;">
               <div class="card" style="padding:24px 20px;">
                 <div class="card-icon" style="width:40px;height:40px;font-size:1.1rem;margin-bottom:14px;">📈</div>
-                <h4 style="font-size:0.95rem;margin-bottom:8px;">More Leads & Enquiries</h4>
+                <h4 style="font-size:0.95rem;margin-bottom:8px;">More Leads &amp; Enquiries</h4>
                 <p style="font-size:0.82rem;">Designed to guide visitors toward contacting you — strategic CTAs and UX that converts.</p>
               </div>
               <div class="card" style="padding:24px 20px;">
@@ -558,24 +604,13 @@
   <footer id="footer" aria-label="Site footer">
     <div class="container">
       <div class="footer-grid">
-
         <div>
           <div class="footer-brand-logo">Your<span>Brand</span></div>
           <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
-          <div class="footer-contact-detail">
-            <span>📧</span>
-            <a href="mailto:jadonpragyanshu02@gmail.com">jadonpragyanshu02@gmail.com</a>
-          </div>
-          <div class="footer-contact-detail">
-            <span>📞</span>
-            <a href="tel:+919045015925">+91 9045015925</a>
-          </div>
-          <div class="footer-contact-detail">
-            <span>📍</span>
-            <span>India (Serving Clients Nationwide)</span>
-          </div>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:hello@yourbrand.in">hello@yourbrand.in</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
         </div>
-
         <div>
           <div class="footer-heading">Quick Links</div>
           <ul class="footer-links">
@@ -586,7 +621,6 @@
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
-
         <div>
           <div class="footer-heading">Core Services</div>
           <ul class="footer-links">
@@ -598,7 +632,6 @@
             <li><a href="website-redesign-services.html">Website Redesign</a></li>
           </ul>
         </div>
-
         <div>
           <div class="footer-heading">More Services</div>
           <ul class="footer-links">
@@ -610,11 +643,9 @@
             <li><a href="portfolio-website-design.html">Portfolio Website Design</a></li>
           </ul>
         </div>
-
       </div>
-
       <div class="footer-bottom">
-        <p class="footer-copy">© 2026 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <p class="footer-copy">© 2024 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
