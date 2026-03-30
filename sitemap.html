@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitemap | YourBrand – Website Designing Services India</title>
+  <meta name="description" content="Browse the complete sitemap of YourBrand. Find all pages including our website designing services, pricing, about us, and contact information." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/sitemap.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Sitemap-specific styles */
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 0;
+    }
+
+    .sitemap-group {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .sitemap-group:hover {
+      border-color: var(--border);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .sitemap-group-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      background: rgba(200,169,110,0.05);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .sitemap-group-icon {
+      font-size: 1.1rem;
+    }
+    .sitemap-group-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .sitemap-links {
+      padding: 14px 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .sitemap-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      font-size: 0.88rem;
+      color: var(--white-muted);
+      transition: var(--transition-fast);
+      border-left: 2px solid transparent;
+    }
+    .sitemap-link:hover {
+      color: var(--gold);
+      background: rgba(200,169,110,0.05);
+      border-left-color: var(--gold);
+    }
+    .sitemap-link::before {
+      content: '→';
+      font-size: 0.8rem;
+      color: var(--gold);
+      opacity: 0.5;
+      transition: opacity var(--transition-fast);
+      flex-shrink: 0;
+    }
+    .sitemap-link:hover::before { opacity: 1; }
+
+    /* Wide card spanning full width */
+    .sitemap-group--wide {
+      grid-column: 1 / -1;
+    }
+    .sitemap-group--wide .sitemap-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Stats bar */
+    .sitemap-stats {
+      display: flex;
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+    .sitemap-stat {
+      flex: 1;
+      background: var(--bg-card);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .sitemap-stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .sitemap-stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white-dim);
+    }
+
+    @media (max-width: 1024px) {
+      .sitemap-grid { grid-template-columns: repeat(2, 1fr); }
+      .sitemap-group--wide .sitemap-links { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sitemap-grid { grid-template-columns: 1fr; }
+      .sitemap-group--wide { grid-column: auto; }
+      .sitemap-group--wide .sitemap-links { grid-template-columns: 1fr; }
+      .sitemap-stats { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="website-designing-services.html">Services</a>
+    <a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Sitemap hero">
+      <div class="page-hero-bg"></div>
+      <div class="page-hero-grid"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>Sitemap</span>
+          </nav>
+          <div class="hero-eyebrow reveal">All Pages</div>
+          <h1 class="reveal reveal-delay-1">Website <em>Sitemap</em></h1>
+          <p class="hero-subtitle reveal reveal-delay-2">
+            A complete directory of all pages on the YourBrand website. Find exactly what you're looking for quickly and easily.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SITEMAP CONTENT -->
+    <section style="padding: 80px 0 100px;">
+      <div class="container">
+
+        <!-- Stats -->
+        <div class="sitemap-stats reveal">
+          <div class="sitemap-stat">
+            <div class="sitemap-stat-num">21</div>
+            <div class="sitemap-stat-label">Total Pages</div>
+          </div>
+          <div class="sitemap-stat">
+            <div class="sitemap-stat-num">12</div>
+            <div class="sitemap-stat-label">Service Pages</div>
+          </div>
+          <div class="sitemap-stat">
+            <div class="sitemap-stat-num">4</div>
+            <div class="sitemap-stat-label">Core Pages</div>
+          </div>
+          <div class="sitemap-stat">
+            <div class="sitemap-stat-num">3</div>
+            <div class="sitemap-stat-label">Legal Pages</div>
+          </div>
+        </div>
+
+        <!-- Sitemap Grid -->
+        <div class="sitemap-grid">
+
+          <!-- Core Pages -->
+          <div class="sitemap-group reveal">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">🏠</span>
+              <span class="sitemap-group-title">Core Pages</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="index.html" class="sitemap-link">Home</a>
+              <a href="about.html" class="sitemap-link">About Us</a>
+              <a href="contact.html" class="sitemap-link">Contact Us</a>
+              <a href="website-design-cost-india.html" class="sitemap-link">Website Design Pricing</a>
+            </div>
+          </div>
+
+          <!-- Main Services -->
+          <div class="sitemap-group reveal reveal-delay-1">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">⭐</span>
+              <span class="sitemap-group-title">Main Services</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="website-designing-services.html" class="sitemap-link">Website Designing Services</a>
+              <a href="wordpress-website-design-services.html" class="sitemap-link">WordPress Website Design</a>
+              <a href="custom-website-design.html" class="sitemap-link">Custom Website Design</a>
+              <a href="responsive-website-design.html" class="sitemap-link">Responsive Website Design</a>
+            </div>
+          </div>
+
+          <!-- Legal Pages -->
+          <div class="sitemap-group reveal reveal-delay-2">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">📄</span>
+              <span class="sitemap-group-title">Legal</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="privacy-policy.html" class="sitemap-link">Privacy Policy</a>
+              <a href="terms-of-service.html" class="sitemap-link">Terms of Service</a>
+              <a href="sitemap.html" class="sitemap-link">Sitemap (This Page)</a>
+            </div>
+          </div>
+
+          <!-- All Service Pages — full width -->
+          <div class="sitemap-group sitemap-group--wide reveal">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">🛠️</span>
+              <span class="sitemap-group-title">All Website Design Services</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="website-designing-services.html" class="sitemap-link">Website Designing Services</a>
+              <a href="wordpress-website-design-services.html" class="sitemap-link">WordPress Website Design Services</a>
+              <a href="custom-website-design.html" class="sitemap-link">Custom Website Design</a>
+              <a href="responsive-website-design.html" class="sitemap-link">Responsive Website Design</a>
+              <a href="landing-page-design-services.html" class="sitemap-link">Landing Page Design Services</a>
+              <a href="business-website-design.html" class="sitemap-link">Business Website Design</a>
+              <a href="small-business-website-design.html" class="sitemap-link">Small Business Website Design</a>
+              <a href="ecommerce-website-design.html" class="sitemap-link">Ecommerce Website Design</a>
+              <a href="website-redesign-services.html" class="sitemap-link">Website Redesign Services</a>
+              <a href="static-website-design.html" class="sitemap-link">Static Website Design</a>
+              <a href="dynamic-website-design.html" class="sitemap-link">Dynamic Website Design</a>
+              <a href="portfolio-website-design.html" class="sitemap-link">Portfolio Website Design</a>
+            </div>
+          </div>
+
+          <!-- Business Types -->
+          <div class="sitemap-group reveal">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">🏢</span>
+              <span class="sitemap-group-title">By Business Type</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="business-website-design.html" class="sitemap-link">Businesses &amp; Corporates</a>
+              <a href="small-business-website-design.html" class="sitemap-link">Small Businesses</a>
+              <a href="ecommerce-website-design.html" class="sitemap-link">Ecommerce &amp; Retail</a>
+              <a href="portfolio-website-design.html" class="sitemap-link">Freelancers &amp; Creatives</a>
+              <a href="landing-page-design-services.html" class="sitemap-link">Marketers &amp; Campaigns</a>
+            </div>
+          </div>
+
+          <!-- By Technology -->
+          <div class="sitemap-group reveal reveal-delay-1">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">⚙️</span>
+              <span class="sitemap-group-title">By Technology / Type</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="wordpress-website-design-services.html" class="sitemap-link">WordPress Websites</a>
+              <a href="static-website-design.html" class="sitemap-link">Static Websites</a>
+              <a href="dynamic-website-design.html" class="sitemap-link">Dynamic Websites</a>
+              <a href="custom-website-design.html" class="sitemap-link">Custom-Built Websites</a>
+              <a href="responsive-website-design.html" class="sitemap-link">Responsive Websites</a>
+            </div>
+          </div>
+
+          <!-- Get Started -->
+          <div class="sitemap-group reveal reveal-delay-2">
+            <div class="sitemap-group-header">
+              <span class="sitemap-group-icon">🚀</span>
+              <span class="sitemap-group-title">Get Started</span>
+            </div>
+            <div class="sitemap-links">
+              <a href="contact.html" class="sitemap-link">Get a Free Quote</a>
+              <a href="contact.html" class="sitemap-link">Book a Consultation</a>
+              <a href="website-design-cost-india.html" class="sitemap-link">View Pricing Guide</a>
+              <a href="about.html" class="sitemap-link">About YourBrand</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- XML Sitemap note -->
+        <div class="reveal mt-40" style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+          <div>
+            <div class="section-label" style="margin-bottom:8px;">For Search Engines</div>
+            <p style="font-size:0.9rem;color:var(--white-dim);margin:0;">The XML sitemap for search engine crawlers is available at <strong style="color:var(--gold);">yourbrand.in/sitemap.xml</strong></p>
+          </div>
+          <a href="sitemap.xml" class="btn btn-outline" style="font-size:0.78rem;padding:10px 22px;flex-shrink:0;">View XML Sitemap</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding-bottom: 100px;">
+      <div class="cta-section reveal">
+        <div class="section-label" style="margin-bottom:20px;">Can't Find What You Need?</div>
+        <h2>Get in Touch With<br><em>Our Team Directly</em></h2>
+        <p>If you can't find the information you're looking for, our team is happy to help. Reach out and we'll point you in the right direction.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-arrow">Contact Us</a>
+          <a href="website-designing-services.html" class="btn btn-outline">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:jadonpragyanshu02@gmail.com">jadonpragyanshu02@gmail.com</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919045015925">+91 9045015925</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="website-designing-services.html">Services</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Core Services</div>
+          <ul class="footer-links">
+            <li><a href="website-designing-services.html">Website Designing Services</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Website Design</a></li>
+            <li><a href="custom-website-design.html">Custom Website Design</a></li>
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Legal</div>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
