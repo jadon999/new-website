@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design Blog | Tips, Guides & Insights – YourBrand India</title>
+  <meta name="description" content="Read expert website design tips, guides, and insights from YourBrand. Learn about web design trends, SEO, WordPress, ecommerce, and growing your business online." />
+  <meta name="keywords" content="website design blog India, web design tips, website SEO guide, WordPress tips India, ecommerce website guide" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/blog.html" />
+  <meta property="og:title" content="Website Design Blog | YourBrand India" />
+  <meta property="og:description" content="Expert website design tips, SEO guides, and insights to help your business grow online." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ══════════════════════════════════════
+       BLOG PAGE STYLES
+    ══════════════════════════════════════ */
+
+    /* Blog layout — main + sidebar */
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ── Featured Post ── */
+    .blog-featured {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 40px;
+      transition: var(--transition);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .blog-featured:hover {
+      border-color: var(--border);
+      box-shadow: var(--shadow-gold);
+      transform: translateY(-3px);
+    }
+    .blog-featured-thumb {
+      position: relative;
+      background: var(--bg-secondary);
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .blog-thumb-visual {
+      font-size: 5rem;
+      opacity: 0.12;
+      position: absolute;
+    }
+    .blog-thumb-gradient {
+      position: absolute;
+      inset: 0;
+    }
+    .blog-featured-body {
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+    .blog-featured-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .blog-featured-label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .blog-featured-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.25;
+    }
+    .blog-featured-title:hover { color: var(--gold); }
+    .blog-featured-excerpt {
+      font-size: 0.9rem;
+      color: var(--white-dim);
+      line-height: 1.75;
+    }
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .blog-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--white-dim);
+      font-weight: 500;
+    }
+    .blog-meta-item span:first-child {
+      font-size: 0.8rem;
+    }
+
+    /* ── Category filter ── */
+    .blog-filter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .blog-filter-btn {
+      padding: 7px 18px;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      border: 1px solid var(--border-subtle);
+      color: var(--white-dim);
+      background: transparent;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .blog-filter-btn:hover,
+    .blog-filter-btn.active {
+      background: var(--gold);
+      color: #0a0a0a;
+      border-color: var(--gold);
+    }
+
+    /* ── Blog Card Grid ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      border-color: var(--border);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .blog-card-thumb {
+      position: relative;
+      height: 180px;
+      background: var(--bg-secondary);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .blog-card-thumb-icon {
+      font-size: 3.5rem;
+      opacity: 0.1;
+      position: absolute;
+      transition: var(--transition);
+    }
+    .blog-card:hover .blog-card-thumb-icon {
+      opacity: 0.18;
+      transform: scale(1.1);
+    }
+    .blog-card-cat {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      padding: 4px 12px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: rgba(200,169,110,0.15);
+      border: 1px solid rgba(200,169,110,0.3);
+      border-radius: 100px;
+      color: var(--gold);
+      backdrop-filter: blur(8px);
+    }
+
+    .blog-card-body {
+      padding: 22px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .blog-card-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.3;
+      transition: color var(--transition-fast);
+    }
+    .blog-card-title:hover { color: var(--gold); }
+    .blog-card-excerpt {
+      font-size: 0.83rem;
+      color: var(--white-dim);
+      line-height: 1.7;
+      flex: 1;
+    }
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4px;
+    }
+    .blog-card-date {
+      font-size: 0.72rem;
+      color: var(--white-dim);
+      font-weight: 500;
+    }
+    .blog-card-read {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap var(--transition-fast);
+    }
+    .blog-card:hover .blog-card-read { gap: 9px; }
+
+    /* ── Pagination ── */
+    .blog-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 48px;
+    }
+    .page-btn {
+      width: 40px; height: 40px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-subtle);
+      background: transparent;
+      color: var(--white-dim);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .page-btn:hover,
+    .page-btn.active {
+      background: var(--gold);
+      color: #0a0a0a;
+      border-color: var(--gold);
+    }
+
+    /* ══════════════════════════════════════
+       SIDEBAR
+    ══════════════════════════════════════ */
+    .blog-sidebar {
+      position: sticky;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .sidebar-widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .sidebar-widget-header {
+      padding: 16px 22px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .sidebar-widget-body { padding: 18px 22px; }
+
+    /* Search widget */
+    .sidebar-search {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--transition-fast);
+    }
+    .sidebar-search:focus-within { border-color: var(--gold); }
+    .sidebar-search input {
+      flex: 1;
+      padding: 11px 14px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--white);
+    }
+    .sidebar-search input::placeholder { color: var(--white-dim); }
+    .sidebar-search button {
+      padding: 11px 14px;
+      background: var(--gold);
+      color: #0a0a0a;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background var(--transition-fast);
+      border: none;
+    }
+    .sidebar-search button:hover { background: var(--gold-light); }
+
+    /* Categories widget */
+    .sidebar-cat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .sidebar-cat {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 14px;
+      border-radius: var(--radius);
+      font-size: 0.83rem;
+      color: var(--white-muted);
+      transition: var(--transition-fast);
+      cursor: pointer;
+    }
+    .sidebar-cat:hover {
+      background: rgba(200,169,110,0.07);
+      color: var(--gold);
+    }
+    .sidebar-cat-count {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--white-dim);
+      background: rgba(255,255,255,0.05);
+      border-radius: 100px;
+      padding: 2px 8px;
+    }
+
+    /* Popular posts widget */
+    .popular-post {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-fast);
+      cursor: pointer;
+    }
+    .popular-post:last-child { border-bottom: none; padding-bottom: 0; }
+    .popular-post:hover .popular-post-title { color: var(--gold); }
+    .popular-post-num {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: rgba(200,169,110,0.2);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
+    }
+    .popular-post-title {
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--white-muted);
+      line-height: 1.5;
+      transition: color var(--transition-fast);
+    }
+    .popular-post-meta {
+      font-size: 0.68rem;
+      color: var(--white-dim);
+      margin-top: 3px;
+    }
+
+    /* Tags widget */
+    .sidebar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .sidebar-tag {
+      padding: 5px 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      color: var(--white-dim);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .sidebar-tag:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(200,169,110,0.06);
+    }
+
+    /* CTA widget */
+    .sidebar-cta {
+      background: linear-gradient(160deg, var(--bg-card) 0%, rgba(200,169,110,0.08) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 22px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sidebar-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 15%; right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .sidebar-cta-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .sidebar-cta h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+    .sidebar-cta p {
+      font-size: 0.82rem;
+      color: var(--white-dim);
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+
+    /* Blog card thumb gradients */
+    .thumb-seo    { background: linear-gradient(135deg, #0f1a2e 0%, #1a2a4a 100%); }
+    .thumb-design { background: linear-gradient(135deg, #1a0f2e 0%, #2a1a4a 100%); }
+    .thumb-wp     { background: linear-gradient(135deg, #0f1f14 0%, #1a3020 100%); }
+    .thumb-ec     { background: linear-gradient(135deg, #2e1a0f 0%, #4a2a1a 100%); }
+    .thumb-mobile { background: linear-gradient(135deg, #0f1e2e 0%, #1a3040 100%); }
+    .thumb-cost   { background: linear-gradient(135deg, #1e1a0f 0%, #302a1a 100%); }
+    .thumb-speed  { background: linear-gradient(135deg, #0a1a0a 0%, #1a2e1a 100%); }
+    .thumb-landing{ background: linear-gradient(135deg, #1a0a1a 0%, #2a1a2a 100%); }
+
+    /* Newsletter bar */
+    .newsletter-bar {
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(200,169,110,0.06) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter-bar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .newsletter-bar-text h3 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      color: var(--white);
+    }
+    .newsletter-bar-text p {
+      font-size: 0.88rem;
+      color: var(--white-dim);
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .newsletter-form input {
+      padding: 13px 18px;
+      background: rgba(255,255,255,0.03);
+      border: none;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: var(--white);
+      width: 240px;
+    }
+    .newsletter-form input::placeholder { color: var(--white-dim); }
+    .newsletter-form button {
+      padding: 13px 22px;
+      background: var(--gold);
+      color: #0a0a0a;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: background var(--transition-fast);
+      white-space: nowrap;
+    }
+    .newsletter-form button:hover { background: var(--gold-light); }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      .blog-sidebar { position: static; }
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-thumb { min-height: 200px; }
+    }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .newsletter-bar { flex-direction: column; padding: 28px 24px; }
+      .newsletter-form { width: 100%; }
+      .newsletter-form input { flex: 1; width: auto; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "YourBrand Website Design Blog",
+    "url": "https://yourbrand.in/blog.html",
+    "description": "Expert website design tips, SEO guides, and insights for Indian businesses.",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://yourbrand.in/#organization",
+      "name": "YourBrand"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="website-design-portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="website-designing-services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="website-design-portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════ PAGE HERO ══════════════════════ -->
+    <section class="page-hero" aria-label="Blog hero">
+      <div class="page-hero-bg"></div>
+      <div class="page-hero-grid"></div>
+      <div class="container">
+        <div class="page-hero-content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>Blog</span>
+          </nav>
+          <div class="hero-eyebrow reveal">Insights &amp; Resources</div>
+          <h1 class="reveal reveal-delay-1">
+            Website Design Tips,<br>SEO Guides &amp; <em>Business Insights</em>
+          </h1>
+          <p class="hero-subtitle reveal reveal-delay-2">
+            Practical advice, actionable tips, and expert insights to help Indian businesses build better websites, rank higher on Google, and grow their revenue online.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ NEWSLETTER BAR ══════════════════════ -->
+    <section style="padding: 48px 0 0;">
+      <div class="container">
+        <div class="newsletter-bar reveal">
+          <div class="newsletter-bar-text">
+            <h3>Get Weekly <em class="text-gold">Web Design Tips</em></h3>
+            <p>Join 2,000+ Indian business owners who get our best tips every week. No spam, ever.</p>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="your@email.com" aria-label="Email address" />
+            <button type="button">Subscribe →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ BLOG CONTENT ══════════════════════ -->
+    <section aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="blog-layout">
+
+          <!-- ══ MAIN CONTENT ══ -->
+          <div>
+
+            <!-- Featured Post -->
+            <div class="blog-featured reveal">
+              <div class="blog-featured-thumb thumb-seo">
+                <div class="blog-thumb-visual">🔍</div>
+                <div class="blog-thumb-gradient" style="background:linear-gradient(135deg,rgba(15,26,46,0.8),rgba(26,42,74,0.6));"></div>
+              </div>
+              <div class="blog-featured-body">
+                <div class="blog-featured-label">Featured Article</div>
+                <a href="blog-post.html">
+                  <h2 class="blog-featured-title">How to Choose the Right Website Design Company in India — A Complete Guide for Business Owners</h2>
+                </a>
+                <p class="blog-featured-excerpt">Finding the right web design agency in India can make or break your online presence. This guide covers everything you need to evaluate before signing a contract — from portfolio quality and SEO knowledge to pricing transparency and post-launch support.</p>
+                <div class="blog-meta">
+                  <div class="blog-meta-item"><span>📅</span><span>15 December 2024</span></div>
+                  <div class="blog-meta-item"><span>⏱️</span><span>8 min read</span></div>
+                  <div class="blog-meta-item"><span>📂</span><span>Web Design</span></div>
+                </div>
+                <a href="blog-post.html" class="btn btn-gold btn-arrow" style="width:fit-content;margin-top:6px;">Read Article</a>
+              </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="blog-filter reveal">
+              <button class="blog-filter-btn active" data-filter="all">All Posts</button>
+              <button class="blog-filter-btn" data-filter="seo">SEO</button>
+              <button class="blog-filter-btn" data-filter="design">Web Design</button>
+              <button class="blog-filter-btn" data-filter="wordpress">WordPress</button>
+              <button class="blog-filter-btn" data-filter="ecommerce">Ecommerce</button>
+              <button class="blog-filter-btn" data-filter="business">Business</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid" id="blogGrid">
+
+              <!-- Post 1 -->
+              <div class="blog-card reveal" data-category="seo">
+                <div class="blog-card-thumb thumb-seo">
+                  <div class="blog-card-thumb-icon">🔍</div>
+                  <div class="blog-card-cat">SEO</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">10 On-Page SEO Mistakes Indian Businesses Make on Their Website</h3>
+                  </a>
+                  <p class="blog-card-excerpt">Most Indian business websites are making at least 3 of these critical on-page SEO mistakes that are silently killing their Google rankings. Are you making them too?</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">10 Dec 2024 · 6 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 2 -->
+              <div class="blog-card reveal reveal-delay-1" data-category="design">
+                <div class="blog-card-thumb thumb-design">
+                  <div class="blog-card-thumb-icon">🎨</div>
+                  <div class="blog-card-cat">Web Design</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">Website Design Checklist 2024 — 25 Things Every Business Website Must Have</h3>
+                  </a>
+                  <p class="blog-card-excerpt">Before you launch your new website, run through this 25-point checklist used by professional web designers to ensure nothing critical is missing.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">5 Dec 2024 · 9 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 3 -->
+              <div class="blog-card reveal" data-category="wordpress">
+                <div class="blog-card-thumb thumb-wp">
+                  <div class="blog-card-thumb-icon">⚙️</div>
+                  <div class="blog-card-cat">WordPress</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">WordPress vs Custom Website — Which is Better for Your Indian Business?</h3>
+                  </a>
+                  <p class="blog-card-excerpt">One of the most common questions we get from clients: should I go with WordPress or a custom-built website? The answer depends on your goals, budget, and long-term plans.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">28 Nov 2024 · 7 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 4 -->
+              <div class="blog-card reveal reveal-delay-1" data-category="ecommerce">
+                <div class="blog-card-thumb thumb-ec">
+                  <div class="blog-card-thumb-icon">🛒</div>
+                  <div class="blog-card-cat">Ecommerce</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">How to Reduce Cart Abandonment on Your Indian Ecommerce Website</h3>
+                  </a>
+                  <p class="blog-card-excerpt">The average cart abandonment rate in India is over 70%. These proven UX and design changes can significantly reduce abandonment and recover lost revenue from your online store.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">20 Nov 2024 · 8 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 5 -->
+              <div class="blog-card reveal" data-category="design business">
+                <div class="blog-card-thumb thumb-mobile">
+                  <div class="blog-card-thumb-icon">📱</div>
+                  <div class="blog-card-cat">Web Design</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">Why Your Mobile Website is Losing You Customers in India Right Now</h3>
+                  </a>
+                  <p class="blog-card-excerpt">Over 75% of Indian internet traffic comes from mobile. If your website isn't optimised for smartphones, you're losing the majority of your potential customers every single day.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">14 Nov 2024 · 5 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 6 -->
+              <div class="blog-card reveal reveal-delay-1" data-category="business">
+                <div class="blog-card-thumb thumb-cost">
+                  <div class="blog-card-thumb-icon">💰</div>
+                  <div class="blog-card-cat">Business</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">Website Design Cost in India — What You Should Really Be Paying in 2024</h3>
+                  </a>
+                  <p class="blog-card-excerpt">From ₹3,000 freelancers to ₹5,00,000 agencies — the price range for website design in India is enormous. Here's what different price points actually get you, and what to avoid.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">8 Nov 2024 · 10 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 7 -->
+              <div class="blog-card reveal" data-category="seo design">
+                <div class="blog-card-thumb thumb-speed">
+                  <div class="blog-card-thumb-icon">⚡</div>
+                  <div class="blog-card-cat">SEO</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">Website Speed Optimisation Guide for Indian Businesses — Get Under 3 Seconds</h3>
+                  </a>
+                  <p class="blog-card-excerpt">A slow website costs you Google rankings and customers. This step-by-step guide shows you exactly how to diagnose and fix the most common website speed problems.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">1 Nov 2024 · 11 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post 8 -->
+              <div class="blog-card reveal reveal-delay-1" data-category="business design">
+                <div class="blog-card-thumb thumb-landing">
+                  <div class="blog-card-thumb-icon">🎯</div>
+                  <div class="blog-card-cat">Business</div>
+                </div>
+                <div class="blog-card-body">
+                  <a href="blog-post.html">
+                    <h3 class="blog-card-title">5 Signs Your Business Website Needs a Redesign Right Now</h3>
+                  </a>
+                  <p class="blog-card-excerpt">An outdated website is actively costing you business every day. These 5 warning signs tell you that it's time to invest in a professional redesign before you lose more customers to competitors.</p>
+                  <div class="blog-card-footer">
+                    <span class="blog-card-date">25 Oct 2024 · 6 min</span>
+                    <a href="blog-post.html" class="blog-card-read">Read More →</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- end blog grid -->
+
+            <!-- Pagination -->
+            <div class="blog-pagination reveal">
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn" style="width:auto;padding:0 16px;">Next →</button>
+            </div>
+
+          </div>
+          <!-- end main -->
+
+          <!-- ══ SIDEBAR ══ -->
+          <aside class="blog-sidebar reveal reveal-delay-2">
+
+            <!-- Search -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">Search Articles</div>
+              <div class="sidebar-widget-body">
+                <div class="sidebar-search">
+                  <input type="text" placeholder="Search blog..." aria-label="Search blog" />
+                  <button type="button" aria-label="Search">🔍</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">Categories</div>
+              <div class="sidebar-widget-body" style="padding:10px 14px;">
+                <div class="sidebar-cat-list">
+                  <div class="sidebar-cat">
+                    <span>All Posts</span>
+                    <span class="sidebar-cat-count">24</span>
+                  </div>
+                  <div class="sidebar-cat">
+                    <span>SEO &amp; Rankings</span>
+                    <span class="sidebar-cat-count">8</span>
+                  </div>
+                  <div class="sidebar-cat">
+                    <span>Web Design</span>
+                    <span class="sidebar-cat-count">7</span>
+                  </div>
+                  <div class="sidebar-cat">
+                    <span>WordPress</span>
+                    <span class="sidebar-cat-count">4</span>
+                  </div>
+                  <div class="sidebar-cat">
+                    <span>Ecommerce</span>
+                    <span class="sidebar-cat-count">3</span>
+                  </div>
+                  <div class="sidebar-cat">
+                    <span>Business Growth</span>
+                    <span class="sidebar-cat-count">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popular Posts -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">Popular Articles</div>
+              <div class="sidebar-widget-body" style="padding:14px 22px;">
+                <div class="popular-post">
+                  <div class="popular-post-num">01</div>
+                  <div>
+                    <a href="blog-post.html">
+                      <div class="popular-post-title">How to Choose the Right Website Design Company in India</div>
+                    </a>
+                    <div class="popular-post-meta">15 Dec 2024 · 8 min read</div>
+                  </div>
+                </div>
+                <div class="popular-post">
+                  <div class="popular-post-num">02</div>
+                  <div>
+                    <a href="blog-post.html">
+                      <div class="popular-post-title">Website Design Cost in India — What You Should Really Be Paying</div>
+                    </a>
+                    <div class="popular-post-meta">8 Nov 2024 · 10 min read</div>
+                  </div>
+                </div>
+                <div class="popular-post">
+                  <div class="popular-post-num">03</div>
+                  <div>
+                    <a href="blog-post.html">
+                      <div class="popular-post-title">WordPress vs Custom Website — Which is Better for Your Business?</div>
+                    </a>
+                    <div class="popular-post-meta">28 Nov 2024 · 7 min read</div>
+                  </div>
+                </div>
+                <div class="popular-post">
+                  <div class="popular-post-num">04</div>
+                  <div>
+                    <a href="blog-post.html">
+                      <div class="popular-post-title">Website Speed Optimisation Guide for Indian Businesses</div>
+                    </a>
+                    <div class="popular-post-meta">1 Nov 2024 · 11 min read</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">Popular Tags</div>
+              <div class="sidebar-widget-body">
+                <div class="sidebar-tags">
+                  <span class="sidebar-tag">Web Design</span>
+                  <span class="sidebar-tag">SEO India</span>
+                  <span class="sidebar-tag">WordPress</span>
+                  <span class="sidebar-tag">Ecommerce</span>
+                  <span class="sidebar-tag">Mobile Design</span>
+                  <span class="sidebar-tag">Website Speed</span>
+                  <span class="sidebar-tag">Google Ranking</span>
+                  <span class="sidebar-tag">UI/UX</span>
+                  <span class="sidebar-tag">Web Design Cost</span>
+                  <span class="sidebar-tag">Landing Page</span>
+                  <span class="sidebar-tag">Business Website</span>
+                  <span class="sidebar-tag">Redesign</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar CTA -->
+            <div class="sidebar-cta">
+              <div class="sidebar-cta-icon">🚀</div>
+              <h4>Need a Professional Website?</h4>
+              <p>Get a free consultation and custom quote for your business website. No obligation.</p>
+              <a href="contact.html" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;">Get a Free Quote</a>
+            </div>
+
+            <!-- Services quick links -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">Our Services</div>
+              <div class="sidebar-widget-body" style="padding:10px 14px;">
+                <div class="sidebar-cat-list">
+                  <a href="website-designing-services.html" class="sidebar-cat" style="text-decoration:none;">Website Designing Services</a>
+                  <a href="wordpress-website-design-services.html" class="sidebar-cat" style="text-decoration:none;">WordPress Website Design</a>
+                  <a href="ecommerce-website-design.html" class="sidebar-cat" style="text-decoration:none;">Ecommerce Website Design</a>
+                  <a href="website-redesign-services.html" class="sidebar-cat" style="text-decoration:none;">Website Redesign Services</a>
+                  <a href="website-design-cost-india.html" class="sidebar-cat" style="text-decoration:none;">View Pricing Guide</a>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+          <!-- end sidebar -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ CTA ══════════════════════ -->
+    <section aria-labelledby="blog-cta-heading">
+      <div class="cta-section reveal">
+        <div class="section-label" style="margin-bottom:20px;">Ready to Take Action?</div>
+        <h2 id="blog-cta-heading">Stop Reading — Start<br><em>Growing Your Business Online</em></h2>
+        <p>Get in touch with our team today. Free consultation, transparent pricing, and a website built to rank, convert, and grow your business.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-arrow">Get a Free Consultation</a>
+          <a href="website-designing-services.html" class="btn btn-outline">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:jadonpragyanshu02@gmail.com">jadonpragyanshu02@gmail.com</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919045015925">+91 9045015925</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="website-design-portfolio.html">Portfolio</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Core Services</div>
+          <ul class="footer-links">
+            <li><a href="website-designing-services.html">Website Designing Services</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Website Design</a></li>
+            <li><a href="custom-website-design.html">Custom Website Design</a></li>
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">More</div>
+          <ul class="footer-links">
+            <li><a href="landing-page-design-services.html">Landing Page Design</a></li>
+            <li><a href="business-website-design.html">Business Website Design</a></li>
+            <li><a href="small-business-website-design.html">Small Business Website</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ── Blog Category Filter ──
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    const blogCards  = document.querySelectorAll('#blogGrid .blog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        blogCards.forEach(card => {
+          const cats = card.getAttribute('data-category') || '';
+          if (filter === 'all' || cats.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
