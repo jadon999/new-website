@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 On-Page SEO Mistakes Indian Businesses Make | YourBrand Blog</title>
+  <meta name="description" content="Most Indian business websites are making at least 3 of these critical on-page SEO mistakes silently killing their Google rankings. Find out what they are and how to fix them." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/blog-detail.html" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ═══════════════════════════════════════
+       BLOG DETAIL PAGE — ALL CSS SELF-CONTAINED
+    ═══════════════════════════════════════ */
+
+    /* Page wrapper */
+    .blog-detail-wrap {
+      padding: 130px 0 80px;
+    }
+
+    /* Two-column layout */
+    .blog-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── ARTICLE ── */
+
+    /* Hero image */
+    .blog-hero-img {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .blog-hero-emoji {
+      font-size: 7rem;
+      opacity: 0.08;
+      user-select: none;
+    }
+    .blog-hero-badge {
+      position: absolute;
+      bottom: 18px;
+      left: 20px;
+      padding: 4px 14px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(200,169,110,0.12);
+      border: 1px solid rgba(200,169,110,0.28);
+      border-radius: 100px;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Meta row */
+    .blog-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .blog-cat-pill {
+      padding: 4px 12px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(200,169,110,0.1);
+      border: 1px solid rgba(200,169,110,0.2);
+      border-radius: 100px;
+    }
+    .blog-meta-info {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    /* Title & intro */
+    .blog-post-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .blog-post-intro {
+      font-size: 1.05rem;
+      color: #d4d4d4;
+      line-height: 1.8;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* Table of Contents */
+    .blog-toc {
+      background: #161616;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      padding: 20px 22px;
+      margin-bottom: 36px;
+    }
+    .blog-toc-title {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .blog-toc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      list-style: none;
+    }
+    .blog-toc-item {
+      display: flex;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: #888;
+      line-height: 1.5;
+    }
+    .blog-toc-num {
+      font-size: 0.62rem;
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .blog-toc-item a {
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .blog-toc-item a:hover { color: var(--gold); }
+
+    /* Article body */
+    .blog-body { line-height: 1.85; }
+
+    .blog-body h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 500;
+      color: #fff;
+      margin: 44px 0 14px;
+      padding-top: 4px;
+    }
+    .blog-body h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #fff;
+      margin: 28px 0 10px;
+    }
+    .blog-body p {
+      font-size: 0.96rem;
+      color: #d4d4d4;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    /* Lists */
+    .blog-body ul,
+    .blog-body ol {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .blog-body ul li,
+    .blog-body ol li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.94rem;
+      color: #d4d4d4;
+      line-height: 1.75;
+    }
+    .blog-body ul li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    .blog-body ol {
+      counter-reset: blog-ol;
+    }
+    .blog-body ol li {
+      counter-increment: blog-ol;
+    }
+    .blog-body ol li::before {
+      content: counter(blog-ol);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      border-radius: 50%;
+      background: rgba(200,169,110,0.1);
+      border: 1px solid rgba(200,169,110,0.25);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .blog-body strong { color: #fff; font-weight: 600; }
+    .blog-body a { color: var(--gold); transition: opacity 0.2s; }
+    .blog-body a:hover { opacity: 0.75; }
+
+    /* Callout box */
+    .blog-callout {
+      background: rgba(200,169,110,0.06);
+      border: 1px solid rgba(200,169,110,0.18);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 0.93rem;
+      color: #d4d4d4;
+      line-height: 1.75;
+    }
+    .blog-callout strong { color: var(--gold); }
+
+    /* Warning box */
+    .blog-warning {
+      background: rgba(255,80,80,0.05);
+      border: 1px solid rgba(255,80,80,0.2);
+      border-left: 3px solid #ff5050;
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 0.91rem;
+      color: #d4d4d4;
+      line-height: 1.75;
+    }
+    .blog-warning strong { color: #ff6b6b; }
+
+    /* Divider */
+    .blog-hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 36px 0;
+    }
+
+    /* Author card */
+    .blog-author {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: #161616;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin-top: 44px;
+    }
+    .blog-author-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(200,169,110,0.12);
+      border: 1px solid rgba(200,169,110,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .blog-author-name {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .blog-author-role {
+      font-size: 0.72rem;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .blog-author-bio {
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    /* Share bar */
+    .blog-share {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      flex-wrap: wrap;
+    }
+    .blog-share-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #888;
+    }
+    .blog-share-btn {
+      padding: 7px 14px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #888;
+      background: transparent;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      transition: all 0.2s;
+    }
+    .blog-share-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Related posts */
+    .blog-related { margin-top: 52px; }
+    .blog-related-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .blog-related-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .blog-related-heading em { color: var(--gold); font-style: italic; }
+    .blog-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .blog-related-card {
+      background: #161616;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .blog-related-card:hover {
+      border-color: rgba(200,169,110,0.25);
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(200,169,110,0.1);
+    }
+    .blog-related-thumb {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      opacity: 0.12;
+    }
+    .blog-related-body { padding: 12px 14px 14px; }
+    .blog-related-cat {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+    .blog-related-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: #d4d4d4;
+      line-height: 1.35;
+      transition: color 0.2s;
+    }
+    .blog-related-card:hover .blog-related-title { color: var(--gold); }
+
+    /* ── SIDEBAR ── */
+    .blog-sidebar {
+      position: sticky;
+      top: 96px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* Sidebar CTA */
+    .sb-cta {
+      background: linear-gradient(160deg, #161616 0%, rgba(200,169,110,0.07) 100%);
+      border: 1px solid rgba(200,169,110,0.2);
+      border-radius: 10px;
+      padding: 26px 22px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sb-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .sb-cta-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .sb-cta h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .sb-cta p {
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* Sidebar widget */
+    .sb-widget {
+      background: #161616;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .sb-widget-head {
+      padding: 13px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .sb-widget-body { padding: 8px 10px; }
+    .sb-link {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      color: #d4d4d4;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .sb-link:hover {
+      background: rgba(200,169,110,0.07);
+      color: var(--gold);
+    }
+
+    /* Progress bar (reading indicator) */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), #e0c48a);
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .blog-detail-grid { grid-template-columns: 1fr; }
+      .blog-sidebar { position: static; }
+    }
+    @media (max-width: 640px) {
+      .blog-related-grid { grid-template-columns: 1fr; }
+      .blog-author { flex-direction: column; text-align: center; }
+      .blog-detail-wrap { padding: 110px 0 60px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "10 On-Page SEO Mistakes Indian Businesses Make on Their Website",
+    "description": "Most Indian business websites are making these critical SEO mistakes that silently kill their Google rankings.",
+    "datePublished": "2024-12-10",
+    "dateModified": "2024-12-10",
+    "author": { "@type": "Organization", "name": "YourBrand", "url": "https://yourbrand.in" },
+    "publisher": { "@type": "Organization", "name": "YourBrand", "url": "https://yourbrand.in" },
+    "mainEntityOfPage": "https://yourbrand.in/blog-detail.html",
+    "keywords": "SEO mistakes India, on-page SEO, website ranking India"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="website-designing-services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+    <div class="blog-detail-wrap">
+      <div class="container">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb" style="margin-bottom:32px;">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="blog.html">Blog</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>10 On-Page SEO Mistakes</span>
+        </nav>
+
+        <div class="blog-detail-grid">
+
+          <!-- ════ ARTICLE ════ -->
+          <article>
+
+            <!-- Hero image -->
+            <div class="blog-hero-img reveal" style="background: linear-gradient(135deg, #0f1a2e 0%, #1a2a4a 100%);">
+              <div class="blog-hero-emoji">🔍</div>
+              <div class="blog-hero-badge">SEO &amp; Rankings</div>
+            </div>
+
+            <!-- Meta -->
+            <div class="blog-meta-row reveal">
+              <span class="blog-cat-pill">SEO &amp; Rankings</span>
+              <div class="blog-meta-info"><span>📅</span><span>10 December 2024</span></div>
+              <div class="blog-meta-info"><span>⏱️</span><span>6 min read</span></div>
+              <div class="blog-meta-info"><span>✍️</span><span>YourBrand Team</span></div>
+            </div>
+
+            <!-- Title -->
+            <h1 class="blog-post-title reveal">10 On-Page SEO Mistakes Indian Businesses Make on Their Website</h1>
+            <p class="blog-post-intro reveal">Most Indian business websites are making at least 3 of these critical on-page SEO mistakes that are silently killing their Google rankings. Are you making them too? Read this before you spend another rupee on paid ads.</p>
+
+            <!-- TOC -->
+            <div class="blog-toc reveal">
+              <div class="blog-toc-title">In This Article</div>
+              <ul class="blog-toc-list">
+                <li class="blog-toc-item"><span class="blog-toc-num">01</span><a href="#mistake1">Missing or Duplicate Title Tags</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">02</span><a href="#mistake2">No Meta Descriptions</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">03</span><a href="#mistake3">Wrong Heading Hierarchy</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">04</span><a href="#mistake4">Images Without Alt Text</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">05</span><a href="#mistake5">Slow Page Speed</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">06</span><a href="#mistake6">Not Mobile-Friendly</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">07</span><a href="#mistake7">Thin or Duplicate Content</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">08</span><a href="#mistake8">Poor Internal Linking</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">09</span><a href="#mistake9">No Schema Markup</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">10</span><a href="#mistake10">Missing XML Sitemap</a></li>
+              </ul>
+            </div>
+
+            <!-- Article Body -->
+            <div class="blog-body reveal">
+
+              <p>Search engine optimisation doesn't have to be complicated. Yet most Indian business websites get the basics completely wrong — and pay for it every single day with low rankings, poor visibility, and missed customers who went to competitors instead.</p>
+              <p>The good news? On-page SEO mistakes are completely fixable. Here are the 10 most common ones we see when auditing Indian business websites — and exactly how to fix each one.</p>
+
+              <h2 id="mistake1">Mistake 1 — Missing or Duplicate Title Tags</h2>
+              <p>Your title tag is the single most important on-page SEO element. It tells Google — and users in the search results — exactly what your page is about. Yet many Indian business websites leave title tags as the default CMS placeholder, use the same title on every page, or write titles that are too long.</p>
+              <ul>
+                <li><strong>Ideal length:</strong> 50–60 characters — not too long, not too short</li>
+                <li><strong>Must include:</strong> Your primary keyword and your brand name</li>
+                <li><strong>Must be unique:</strong> Every single page needs a completely different title tag</li>
+              </ul>
+              <div class="blog-callout"><strong>Fix it:</strong> Open each page of your website in a browser and look at the tab — that's your title tag. Make sure every page has a unique, keyword-relevant title under 60 characters. If they're all the same or say "Home" or "Page 1" — fix them immediately.</div>
+
+              <h2 id="mistake2">Mistake 2 — No Meta Descriptions</h2>
+              <p>Meta descriptions don't directly affect rankings — but they dramatically affect how many people click on your result in the search results. A compelling meta description is the difference between someone clicking your listing or your competitor's right below it. Many Indian websites leave these completely blank, causing Google to auto-generate unhelpful, random snippets from the page content.</p>
+              <div class="blog-callout"><strong>Fix it:</strong> Write a unique meta description of 140–160 characters for every page. Include your primary keyword naturally and write it like a small advertisement — because in the search results, that's exactly what it is.</div>
+
+              <h2 id="mistake3">Mistake 3 — Wrong Heading Hierarchy (H1, H2, H3)</h2>
+              <p>Your heading tags should form a clear logical hierarchy — like the outline of a well-structured document. Every page must have exactly one H1 (your main keyword and topic), followed by H2s for main sections, and H3s for sub-sections. Common mistakes include having multiple H1s on one page, using headings purely for styling purposes, or skipping heading levels entirely.</p>
+              <div class="blog-warning"><strong>⚠ Common Error:</strong> Many WordPress themes automatically make the site name or logo an H1 — meaning your page content ends up with either no proper H1 or two H1s competing. Always check your page source code to confirm the heading structure is correct.</div>
+
+              <h2 id="mistake4">Mistake 4 — Images Without Alt Text</h2>
+              <p>Google cannot see images — it reads the alt attribute to understand what an image depicts. Websites with blank alt attributes are completely invisible to Google Image Search and miss an important on-page signal. Every image on your website needs a descriptive, honest alt attribute that explains what the image shows — incorporating relevant keywords where they fit naturally.</p>
+              <p>For a photo of your team: <strong>"YourBrand web design team in Bengaluru"</strong> — not just <strong>"image1.jpg"</strong> or left blank.</p>
+
+              <hr class="blog-hr" />
+
+              <h2 id="mistake5">Mistake 5 — Slow Page Speed</h2>
+              <p>Google has officially confirmed that page speed is a direct ranking factor. In India, where the majority of users access websites over mobile networks, slow loading dramatically increases bounce rates — hurting your rankings even further. A website that takes more than 3 seconds to load is simultaneously losing visitors and losing rankings.</p>
+              <ul>
+                <li>Compress and properly size all images before uploading to your website</li>
+                <li>Use a reliable, fast hosting provider — avoid the cheapest ₹99/month shared plans</li>
+                <li>Enable caching on your website to serve pages faster to repeat visitors</li>
+                <li>Minimise unnecessary plugins and external scripts that slow down every page load</li>
+              </ul>
+
+              <h2 id="mistake6">Mistake 6 — Not Mobile-Friendly</h2>
+              <p>Google uses mobile-first indexing — meaning it crawls and ranks the mobile version of your website first. With over 75% of Indian internet traffic coming from smartphones, a non-mobile-friendly website is both a user experience disaster and an SEO disaster. Google's ranking algorithms actively deprioritise websites that deliver a poor mobile experience — regardless of how good the desktop version looks.</p>
+              <div class="blog-callout"><strong>Fix it:</strong> Test your website using Google's free Mobile-Friendly Test tool. Better yet — open your own website on your smartphone and navigate it exactly as a real customer would. If anything looks broken, tiny, or hard to tap — that's lost business. Learn more about our <a href="responsive-website-design.html">responsive website design services</a>.</div>
+
+              <h2 id="mistake7">Mistake 7 — Thin or Duplicate Content</h2>
+              <p>Pages with very little content (under 300 words) or pages that duplicate content from elsewhere on your website send very weak signals to Google. Each page needs substantial, original content that genuinely serves the user's search intent. Service pages with only 40–50 words of text are almost never going to rank competitively in India's increasingly competitive search landscape.</p>
+
+              <h2 id="mistake8">Mistake 8 — Poor Internal Linking</h2>
+              <p>Internal links help Google understand the structure and hierarchy of your website, and they pass ranking strength between pages. Many Indian business websites have almost no internal linking — pages exist in complete isolation rather than forming an interconnected content structure. Every page on your website should link to at least 2–5 other relevant pages, using descriptive anchor text that tells Google what the linked page is about.</p>
+
+              <h2 id="mistake9">Mistake 9 — No Schema Markup</h2>
+              <p>Schema markup (structured data) is code added to your website that helps Google understand your content in much greater detail. For Indian businesses, Local Business schema, FAQ schema, and Service schema are particularly valuable — they can trigger rich results in Google search that significantly increase your click-through rates. Most Indian business websites have absolutely zero schema markup implemented.</p>
+
+              <h2 id="mistake10">Mistake 10 — Missing XML Sitemap</h2>
+              <p>An XML sitemap tells Google about all the pages on your website and how frequently they're updated — making it much easier for Google to discover and index all your content. Without a sitemap submitted to Google Search Console, some of your pages may never be properly indexed. Your sitemap should be submitted via Google Search Console and referenced in your robots.txt file.</p>
+
+              <div class="blog-callout"><strong>The Bottom Line:</strong> On-page SEO is the foundation of everything. No amount of backlinks or paid ads can fully compensate for a website that gets these basics wrong. Fix these 10 mistakes and you'll immediately build a much stronger base for your Google rankings. Need a website built right from day one? Our <a href="website-designing-services.html">professional website designing services</a> include complete on-page SEO setup as standard on every project.</div>
+
+            </div>
+            <!-- end blog-body -->
+
+            <!-- Share -->
+            <div class="blog-share reveal">
+              <span class="blog-share-label">Share this:</span>
+              <button class="blog-share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href))">LinkedIn</button>
+              <button class="blog-share-btn" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href))">WhatsApp</button>
+              <button class="blog-share-btn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',2000)">Copy Link</button>
+            </div>
+
+            <!-- Author -->
+            <div class="blog-author reveal">
+              <div class="blog-author-avatar">YB</div>
+              <div>
+                <div class="blog-author-name">YourBrand Editorial Team</div>
+                <div class="blog-author-role">Website Design &amp; SEO Experts — India</div>
+                <p class="blog-author-bio">8+ years of experience building and optimising professional websites for Indian businesses. Our insights come from hundreds of real client projects and website audits across India.</p>
+              </div>
+            </div>
+
+            <!-- Related -->
+            <div class="blog-related reveal">
+              <div class="gold-line"></div>
+              <p class="blog-related-label">Continue Reading</p>
+              <h3 class="blog-related-heading">More <em>Articles You'll Find Useful</em></h3>
+              <div class="blog-related-grid">
+                <a href="blog-detail.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0a1a0a,#1a2e1a);">⚡</div>
+                  <div class="blog-related-body">
+                    <div class="blog-related-cat">SEO</div>
+                    <div class="blog-related-title">Website Speed Optimisation Guide for Indian Businesses</div>
+                  </div>
+                </a>
+                <a href="blog-detail.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0f1e2e,#1a3040);">📱</div>
+                  <div class="blog-related-body">
+                    <div class="blog-related-cat">Web Design</div>
+                    <div class="blog-related-title">Why Your Mobile Website Is Losing You Customers</div>
+                  </div>
+                </a>
+                <a href="blog-detail.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#1a0f2e,#2a1a4a);">🎨</div>
+                  <div class="blog-related-body">
+                    <div class="blog-related-cat">Web Design</div>
+                    <div class="blog-related-title">Website Design Checklist 2024 — 25 Must-Haves</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- ════ SIDEBAR ════ -->
+          <aside class="blog-sidebar reveal reveal-delay-2">
+
+            <!-- CTA -->
+            <div class="sb-cta">
+              <div class="sb-cta-icon">🚀</div>
+              <h4>Get an SEO-Ready Website</h4>
+              <p>Every website we build includes full on-page SEO setup — none of these mistakes, guaranteed.</p>
+              <a href="contact.html" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;margin-top:4px;">Get a Free Quote</a>
+            </div>
+
+            <!-- Services -->
+            <div class="sb-widget">
+              <div class="sb-widget-head">Related Services</div>
+              <div class="sb-widget-body">
+                <a href="website-designing-services.html" class="sb-link">Website Designing Services</a>
+                <a href="responsive-website-design.html" class="sb-link">Responsive Website Design</a>
+                <a href="website-redesign-services.html" class="sb-link">Website Redesign Services</a>
+                <a href="wordpress-website-design-services.html" class="sb-link">WordPress Design</a>
+                <a href="website-design-cost-india.html" class="sb-link">View Pricing Guide</a>
+              </div>
+            </div>
+
+            <!-- More posts -->
+            <div class="sb-widget">
+              <div class="sb-widget-head">More Articles</div>
+              <div class="sb-widget-body">
+                <a href="blog-detail.html" class="sb-link">Website Design Checklist 2024</a>
+                <a href="blog-detail.html" class="sb-link">WordPress vs Custom Website</a>
+                <a href="blog-detail.html" class="sb-link">Website Design Cost India</a>
+                <a href="blog-detail.html" class="sb-link">5 Signs You Need a Redesign</a>
+                <a href="blog-detail.html" class="sb-link">Website Speed Guide</a>
+                <a href="blog.html" class="sb-link" style="color:var(--gold);margin-top:4px;">← All Blog Posts</a>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="sb-widget">
+              <div class="sb-widget-head">Weekly Tips</div>
+              <div class="sb-widget-body" style="padding:16px 14px;">
+                <p style="font-size:.82rem;color:#888;margin-bottom:14px;line-height:1.6;">Get web design &amp; SEO tips every week. No spam.</p>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <input type="email" placeholder="your@email.com" style="padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;font-family:'Outfit',sans-serif;font-size:.84rem;color:#fff;outline:none;" />
+                  <button style="padding:10px;background:var(--gold);color:#0a0a0a;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;">Subscribe →</button>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section style="padding-bottom:80px;">
+      <div class="cta-section reveal">
+        <div class="section-label" style="margin-bottom:16px;">Fix These Mistakes Today</div>
+        <h2>Get a Website Built <em>Right from Day One</em></h2>
+        <p>Every website we design includes complete on-page SEO setup — so you launch with a strong foundation, not a long list of problems to fix later.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-arrow">Get a Free Consultation</a>
+          <a href="website-designing-services.html" class="btn btn-outline">Explore Our Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:jadonpragyanshu02@gmail.com">jadonpragyanshu02@gmail.com</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919045015925">+91 9045015925</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="website-design-portfolio.html">Portfolio</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Core Services</div>
+          <ul class="footer-links">
+            <li><a href="website-designing-services.html">Website Designing Services</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Website Design</a></li>
+            <li><a href="custom-website-design.html">Custom Website Design</a></li>
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Legal</div>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Reading progress bar
+    window.addEventListener('scroll', () => {
+      const doc   = document.documentElement;
+      const total = doc.scrollHeight - doc.clientHeight;
+      const pct   = (window.scrollY / total) * 100;
+      document.getElementById('readingProgress').style.width = pct + '%';
+    }, { passive: true });
+
+    // Share buttons already have inline onclick
+  </script>
+</body>
+</html>
