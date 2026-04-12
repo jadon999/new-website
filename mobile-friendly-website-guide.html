@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Your Mobile Website Is Losing You Customers in India | YourBrand Blog</title>
+  <meta name="description" content="Over 75% of Indian internet traffic comes from mobile. If your website isn't optimised for smartphones, you're losing the majority of your potential customers every single day." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/blog-detail-5.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-detail-wrap{padding:130px 0 80px}
+    .blog-detail-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+    .blog-hero-img{width:100%;aspect-ratio:16/7;border-radius:10px;border:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:36px;position:relative}
+    .blog-hero-emoji{font-size:7rem;opacity:.08;user-select:none}
+    .blog-hero-badge{position:absolute;bottom:18px;left:20px;padding:4px 14px;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.28);border-radius:100px;backdrop-filter:blur(8px)}
+    .blog-meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .blog-cat-pill{padding:4px 12px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.2);border-radius:100px}
+    .blog-meta-info{display:flex;align-items:center;gap:6px;font-size:.75rem;color:#888}
+    .blog-post-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:500;color:#fff;line-height:1.2;margin-bottom:18px}
+    .blog-post-intro{font-size:1.05rem;color:#d4d4d4;line-height:1.8;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .blog-toc{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:20px 22px;margin-bottom:36px}
+    .blog-toc-title{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+    .blog-toc-list{display:flex;flex-direction:column;gap:8px;list-style:none;padding:0;margin:0}
+    .blog-toc-item{display:flex;gap:10px;font-size:.84rem;color:#888;line-height:1.5}
+    .blog-toc-num{font-size:.62rem;color:var(--gold);font-weight:700;flex-shrink:0;margin-top:3px}
+    .blog-toc-item a{color:#888;text-decoration:none;transition:color .2s}
+    .blog-toc-item a:hover{color:var(--gold)}
+    .blog-body{line-height:1.85}
+    .blog-body h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:500;color:#fff;margin:44px 0 14px;padding-top:4px}
+    .blog-body h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:500;color:#fff;margin:28px 0 10px}
+    .blog-body p{font-size:.96rem;color:#d4d4d4;line-height:1.85;margin-bottom:16px}
+    .blog-body ul,.blog-body ol{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px}
+    .blog-body ul li,.blog-body ol li{display:flex;align-items:flex-start;gap:10px;font-size:.94rem;color:#d4d4d4;line-height:1.75}
+    .blog-body ul li::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
+    .blog-body ol{counter-reset:blog-ol}
+    .blog-body ol li{counter-increment:blog-ol}
+    .blog-body ol li::before{content:counter(blog-ol);display:flex;align-items:center;justify-content:center;width:22px;height:22px;min-width:22px;border-radius:50%;background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.25);color:var(--gold);font-size:.68rem;font-weight:700;flex-shrink:0;margin-top:1px}
+    .blog-body strong{color:#fff;font-weight:600}
+    .blog-body a{color:var(--gold);transition:opacity .2s}
+    .blog-body a:hover{opacity:.75}
+    .blog-callout{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.18);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;margin:28px 0;font-size:.93rem;color:#d4d4d4;line-height:1.75}
+    .blog-callout strong{color:var(--gold)}
+    .blog-warning{background:rgba(255,80,80,.05);border:1px solid rgba(255,80,80,.2);border-left:3px solid #ff5050;border-radius:0 8px 8px 0;padding:18px 22px;margin:28px 0;font-size:.91rem;color:#d4d4d4;line-height:1.75}
+    .blog-warning strong{color:#ff6b6b}
+    .blog-hr{border:none;border-top:1px solid rgba(255,255,255,.07);margin:36px 0}
+    /* stat bar */
+    .stat-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin:28px 0}
+    .stat-bar-item{background:#111;padding:20px 16px;text-align:center}
+    .stat-bar-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:600;color:var(--gold);line-height:1;margin-bottom:6px}
+    .stat-bar-label{font-size:.72rem;color:#888;line-height:1.5}
+    /* sign cards */
+    .sign-card{display:flex;gap:16px;background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:18px 20px;margin-bottom:12px;transition:border-color .25s}
+    .sign-card:hover{border-color:rgba(200,169,110,.2)}
+    .sign-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+    .sign-content h4{font-size:.95rem;font-weight:600;color:#fff;margin-bottom:4px}
+    .sign-content p{font-size:.84rem;color:#888;line-height:1.65;margin:0}
+    /* must-have list */
+    .must-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .must-item:last-child{border-bottom:none}
+    .must-check{width:22px;height:22px;border-radius:4px;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.25);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
+    .must-text{font-size:.9rem;color:#d4d4d4;line-height:1.65}
+    .must-text strong{color:#fff}
+    /* test tool cards */
+    .tool-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .tool-card{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:16px 18px}
+    .tool-card-name{font-size:.85rem;font-weight:700;color:var(--gold);margin-bottom:4px}
+    .tool-card-desc{font-size:.8rem;color:#888;line-height:1.6}
+    .blog-author{display:flex;align-items:center;gap:18px;background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:24px 26px;margin-top:44px}
+    .blog-author-avatar{width:54px;height:54px;border-radius:50%;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:var(--gold);font-weight:600;flex-shrink:0}
+    .blog-author-name{font-size:.93rem;font-weight:700;color:#fff;margin-bottom:2px}
+    .blog-author-role{font-size:.72rem;color:var(--gold);margin-bottom:6px}
+    .blog-author-bio{font-size:.82rem;color:#888;line-height:1.6}
+    .blog-share{display:flex;align-items:center;gap:10px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
+    .blog-share-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888}
+    .blog-share-btn{padding:7px 14px;border-radius:4px;border:1px solid rgba(255,255,255,.07);font-size:.72rem;font-weight:600;color:#888;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+    .blog-share-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .blog-related{margin-top:52px}
+    .blog-related-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .blog-related-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:500;color:#fff;margin-bottom:24px}
+    .blog-related-heading em{color:var(--gold);font-style:italic}
+    .blog-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .blog-related-card{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;transition:all .3s ease;text-decoration:none;display:block}
+    .blog-related-card:hover{border-color:rgba(200,169,110,.25);transform:translateY(-3px);box-shadow:0 0 30px rgba(200,169,110,.1)}
+    .blog-related-thumb{height:90px;display:flex;align-items:center;justify-content:center;font-size:2rem;opacity:.12}
+    .blog-related-body{padding:12px 14px 14px}
+    .blog-related-cat{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+    .blog-related-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:.93rem;font-weight:500;color:#d4d4d4;line-height:1.35;transition:color .2s}
+    .blog-related-card:hover .blog-related-title{color:var(--gold)}
+    .blog-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:22px}
+    .sb-cta{background:linear-gradient(160deg,#161616 0%,rgba(200,169,110,.07) 100%);border:1px solid rgba(200,169,110,.2);border-radius:10px;padding:26px 22px;text-align:center;position:relative;overflow:hidden}
+    .sb-cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .sb-cta-icon{font-size:1.8rem;margin-bottom:10px}
+    .sb-cta h4{font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px}
+    .sb-cta p{font-size:.8rem;color:#888;line-height:1.6;margin-bottom:16px}
+    .sb-widget{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+    .sb-widget-head{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.63rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .sb-widget-body{padding:8px 10px}
+    .sb-link{display:block;padding:9px 10px;border-radius:4px;font-size:.82rem;color:#d4d4d4;text-decoration:none;transition:all .2s}
+    .sb-link:hover{background:rgba(200,169,110,.07);color:var(--gold)}
+    .reading-progress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,var(--gold),#e0c48a);z-index:9999;transition:width .1s linear}
+    @media(max-width:1100px){.blog-detail-grid{grid-template-columns:1fr}.blog-sidebar{position:static}}
+    @media(max-width:768px){.stat-bar{grid-template-columns:1fr 1fr}.tool-cards{grid-template-columns:1fr}}
+    @media(max-width:640px){.blog-related-grid{grid-template-columns:1fr}.blog-author{flex-direction:column;text-align:center}.blog-detail-wrap{padding:110px 0 60px}.stat-bar{grid-template-columns:1fr 1fr}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Your Mobile Website Is Losing You Customers in India Right Now","datePublished":"2024-11-14","author":{"@type":"Organization","name":"YourBrand","url":"https://yourbrand.in"},"publisher":{"@type":"Organization","name":"YourBrand","url":"https://yourbrand.in"},"mainEntityOfPage":"https://yourbrand.in/blog-detail-5.html"}</script>
+</head>
+<body>
+
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a><a href="website-designing-services.html">Services</a>
+    <a href="blog.html">Blog</a><a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a><a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+    <div class="blog-detail-wrap">
+      <div class="container">
+
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb" style="margin-bottom:32px;">
+          <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+          <a href="blog.html">Blog</a><span class="breadcrumb-sep">›</span>
+          <span>Mobile Website Guide</span>
+        </nav>
+
+        <div class="blog-detail-grid">
+
+          <article>
+
+            <div class="blog-hero-img reveal" style="background:linear-gradient(135deg,#0f1e2e 0%,#1a3040 100%);">
+              <div class="blog-hero-emoji">📱</div>
+              <div class="blog-hero-badge">Web Design</div>
+            </div>
+
+            <div class="blog-meta-row reveal">
+              <span class="blog-cat-pill">Web Design</span>
+              <div class="blog-meta-info"><span>📅</span><span>14 November 2024</span></div>
+              <div class="blog-meta-info"><span>⏱️</span><span>5 min read</span></div>
+              <div class="blog-meta-info"><span>✍️</span><span>YourBrand Team</span></div>
+            </div>
+
+            <h1 class="blog-post-title reveal">Why Your Mobile Website Is Losing You Customers in India Right Now</h1>
+            <p class="blog-post-intro reveal">Over 75% of Indian internet traffic comes from mobile devices. If your website isn't properly optimised for smartphones, you're losing the majority of your potential customers — to competitors who have got mobile right — every single day without realising it.</p>
+
+            <div class="blog-toc reveal">
+              <div class="blog-toc-title">In This Article</div>
+              <ul class="blog-toc-list">
+                <li class="blog-toc-item"><span class="blog-toc-num">01</span><a href="#india-mobile">India Is a Mobile-First Nation</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">02</span><a href="#google">How Google Treats Mobile Websites</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">03</span><a href="#signs">7 Signs Your Mobile Website Is Failing</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">04</span><a href="#must-haves">What a Great Mobile Website Must Have</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">05</span><a href="#test">How to Test Your Mobile Experience</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">06</span><a href="#cost">The Real Cost of Ignoring Mobile</a></li>
+              </ul>
+            </div>
+
+            <div class="blog-body reveal">
+
+              <p>India has crossed 900 million internet users — and the vast majority browse on their smartphones. Unlike western markets where desktop usage remains significant, India effectively leapfrogged the desktop era for much of its population. The implication for your business website is enormous.</p>
+
+              <!-- Stat bar -->
+              <div class="stat-bar">
+                <div class="stat-bar-item">
+                  <div class="stat-bar-num">75%+</div>
+                  <div class="stat-bar-label">Indian internet traffic from mobile</div>
+                </div>
+                <div class="stat-bar-item">
+                  <div class="stat-bar-num">900M+</div>
+                  <div class="stat-bar-label">Internet users in India</div>
+                </div>
+                <div class="stat-bar-item">
+                  <div class="stat-bar-num">53%</div>
+                  <div class="stat-bar-label">Users abandon sites loading over 3 seconds</div>
+                </div>
+                <div class="stat-bar-item">
+                  <div class="stat-bar-num">85%+</div>
+                  <div class="stat-bar-label">Mobile traffic in Tier 2 &amp; 3 cities</div>
+                </div>
+              </div>
+
+              <h2 id="india-mobile">1. India Is a Mobile-First Nation</h2>
+              <p>The numbers are impossible to ignore. Over 75% of all internet traffic in India comes from mobile devices. In Tier 2 and Tier 3 cities — where some of India's most significant business growth is happening right now — mobile usage often exceeds 85–90% of total web traffic.</p>
+              <p>For most Indian businesses, the majority of website visitors are already using a smartphone to find them. This means your mobile website experience isn't a secondary feature to be considered after desktop — it <em>is</em> your primary website experience. If it's poor, you're failing the majority of your audience before they've read a single word about your business.</p>
+
+              <div class="blog-callout"><strong>Think about it this way:</strong> If you walked into a physical store and the entrance was broken, confusing, or impossible to navigate — you'd leave immediately and go somewhere else. A broken mobile website does exactly the same thing to your online visitors — except they have dozens of competitors one tap away.</div>
+
+              <h2 id="google">2. How Google Treats Mobile Websites</h2>
+              <p>Google switched to mobile-first indexing — meaning Google primarily crawls, indexes, and ranks the <strong>mobile version</strong> of your website. If your mobile experience is poor, your Google rankings suffer across the board — including for desktop searches. You get a double penalty:</p>
+              <ul>
+                <li>Poor user experience drives visitors away immediately, increasing your bounce rate</li>
+                <li>Poor mobile performance signals to Google that your website isn't serving users well — pushing you down in rankings</li>
+                <li>Lower rankings mean fewer visitors finding you in the first place</li>
+                <li>Fewer visitors means fewer leads and less revenue — the cycle compounds every day</li>
+              </ul>
+
+              <div class="blog-warning"><strong>⚠ Critical:</strong> Google has explicitly confirmed that mobile usability is a ranking signal. Websites that are not mobile-friendly are actively deprioritised in search results. With the competition for Google rankings in India intensifying every year, this disadvantage is one your business simply cannot afford to carry.</div>
+
+              <h2 id="signs">3. Seven Signs Your Mobile Website Is Failing</h2>
+              <p>Pick up your smartphone right now and visit your own website. Look honestly for these warning signs:</p>
+
+              <div class="sign-card">
+                <div class="sign-icon">↔️</div>
+                <div class="sign-content">
+                  <h4>Horizontal Scrolling Required</h4>
+                  <p>If you need to scroll left or right to see all the content on your page, your layout is broken on mobile. This is a fundamental responsive design failure that immediately damages credibility.</p>
+                </div>
+              </div>
+              <div class="sign-card">
+                <div class="sign-icon">🔍</div>
+                <div class="sign-content">
+                  <h4>Text Is Too Small to Read</h4>
+                  <p>If you need to pinch and zoom to read any text on your website, your font sizes are not optimised for mobile. Body text should be at minimum 16px — smaller is genuinely difficult to read on phone screens.</p>
+                </div>
+              </div>
+              <div class="sign-card">
+                <div class="sign-icon">👆</div>
+                <div class="sign-content">
+                  <h4>Buttons Are Too Small to Tap Accurately</h4>
+                  <p>If tapping a button or link requires pin-point precision with your finger, it's too small. Mobile buttons need a minimum 44px tap target — fingers are not mouse pointers, and frustration leads directly to abandonment.</p>
+                </div>
+              </div>
+              <div class="sign-card">
+                <div class="sign-icon">🐌</div>
+                <div class="sign-content">
+                  <h4>It Takes More Than 3 Seconds to Load</h4>
+                  <p>If your website takes longer than 3 seconds to appear on a 4G mobile connection, over 53% of users will leave before seeing a single word of your content. Test using Google PageSpeed Insights right now.</p>
+                </div>
+              </div>
+              <div class="sign-card">
+                <div class="sign-icon">🔲</div>
+                <div class="sign-content">
+                  <h4>Elements Overlap Each Other</h4>
+                  <p>Images, text, and buttons that overlap or collide on mobile screens indicate a broken layout that was designed only for desktop and never properly tested on real smartphones.</p>
+                </div>
+              </div>
+              <div class="sign-card">
+                <div class="sign-icon">☰</div>
+                <div class="sign-content">
+                  <h4>Navigation Is Difficult or Broken</h4>
+                  <p>A full desktop navigation menu that doesn't collapse into a mobile-friendly hamburger menu is a critical failure. Visitors who can't navigate your website simply leave — they won't try to figure it out.</p>
+                </div>
+              </div>
+              <div class="sign-card">
+                <div class="sign-icon">📝</div>
+                <div class="sign-content">
+                  <h4>Forms Are Frustrating to Complete</h4>
+                  <p>Input fields that are too small to tap accurately, or that trigger the wrong keyboard type (e.g., showing an alphabetic keyboard for a phone number field), make contact forms so frustrating that potential leads simply give up.</p>
+                </div>
+              </div>
+
+              <h2 id="must-haves">4. What a Great Mobile Website Must Have</h2>
+              <p>A properly mobile-optimised website for Indian businesses must include all of these elements:</p>
+
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>Fluid responsive layout</strong> — Adapts elegantly to any screen size from 320px to 428px and beyond. Not just "works on common sizes" but genuinely perfect on any device.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>Minimum 16px body font size</strong> — Anything smaller requires zooming on mobile and immediately signals a poorly built website to visitors.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>44px minimum tap targets</strong> — All buttons, links, and interactive elements have a touch-friendly tap area — not just visually large, but actually tappable without frustration.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>Sub-3-second load time on 4G</strong> — Optimised images, minimal scripts, fast hosting. Speed is not optional when 75% of your visitors are on mobile networks of varying quality.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>Collapsing mobile navigation</strong> — A clean hamburger menu or tab bar that works intuitively with one hand — because most people use their phone one-handed.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>Click-to-call phone numbers</strong> — Every phone number on your website is a tappable <code>tel:</code> link that instantly initiates a call — one of the simplest, highest-impact improvements for any Indian business website.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>Correct keyboard types on forms</strong> — Phone number fields trigger the numeric keypad. Email fields show the @ symbol. Removes friction from every form interaction on mobile.</div>
+              </div>
+              <div class="must-item">
+                <div class="must-check">✓</div>
+                <div class="must-text"><strong>No intrusive popups on mobile</strong> — Google penalises websites that show large intrusive interstitials on mobile. Keep any popups small and easy to dismiss.</div>
+              </div>
+
+              <h2 id="test">5. How to Test Your Mobile Experience</h2>
+              <p>You don't need expensive tools or technical expertise to test your mobile website. Start with these free methods:</p>
+
+              <div class="tool-cards">
+                <div class="tool-card">
+                  <div class="tool-card-name">Google Mobile-Friendly Test</div>
+                  <div class="tool-card-desc">search.google.com/test/mobile-friendly — Google's own tool gives you an instant pass/fail result with specific issues highlighted.</div>
+                </div>
+                <div class="tool-card">
+                  <div class="tool-card-name">Google PageSpeed Insights</div>
+                  <div class="tool-card-desc">pagespeed.web.dev — Shows your mobile performance score (aim for 70+) and specific actionable recommendations ranked by impact.</div>
+                </div>
+                <div class="tool-card">
+                  <div class="tool-card-name">Your Own Smartphone</div>
+                  <div class="tool-card-desc">The most honest test. Browse your site as a real customer on your actual phone. Try to find your contact details and fill in your enquiry form. Note every frustration.</div>
+                </div>
+                <div class="tool-card">
+                  <div class="tool-card-name">Ask a Real Person</div>
+                  <div class="tool-card-desc">Hand your phone to someone unfamiliar with your website and ask them to find your services and contact you. Watch silently and note exactly where they hesitate or struggle.</div>
+                </div>
+              </div>
+
+              <h2 id="cost">6. The Real Cost of Ignoring Mobile</h2>
+              <p>Let's make this concrete with a simple calculation. Suppose your website receives <strong>1,000 visitors per month</strong> and 75% of them are on mobile — that's <strong>750 mobile visitors</strong>.</p>
+              <p>If your poor mobile experience causes even 30% of those visitors to leave immediately (a conservative estimate for a non-mobile-friendly site), that's <strong>225 potential customers per month</strong> who never see what your business offers.</p>
+              <p>Over a year, that's <strong>2,700 lost potential customers</strong>. Even converting just 5% of those into actual enquiries would mean <strong>135 additional leads per year</strong> — from fixing something that may take just a few weeks to address.</p>
+
+              <div class="blog-callout"><strong>The Solution:</strong> A properly responsive website designed with a mobile-first approach eliminates every one of these problems. Every website we build at YourBrand is designed mobile-first, tested extensively on real Android and iPhone devices, and verified to load quickly on Indian 4G connections. Learn more about our <a href="responsive-website-design.html">responsive website design services</a> — or <a href="contact.html">contact us for a free mobile audit</a> of your current website.</div>
+
+            </div>
+
+            <div class="blog-share reveal">
+              <span class="blog-share-label">Share this:</span>
+              <button class="blog-share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href))">LinkedIn</button>
+              <button class="blog-share-btn" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href))">WhatsApp</button>
+              <button class="blog-share-btn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',2000)">Copy Link</button>
+            </div>
+
+            <div class="blog-author reveal">
+              <div class="blog-author-avatar">YB</div>
+              <div>
+                <div class="blog-author-name">YourBrand Editorial Team</div>
+                <div class="blog-author-role">Mobile-First Web Design Experts — India</div>
+                <p class="blog-author-bio">Every website we build is designed mobile-first and tested on real Indian devices. We've seen firsthand how transformative a properly mobile-optimised website is for Indian businesses of all sizes.</p>
+              </div>
+            </div>
+
+            <div class="blog-related reveal">
+              <div class="gold-line"></div>
+              <p class="blog-related-label">Continue Reading</p>
+              <h3 class="blog-related-heading">More <em>Articles You'll Find Useful</em></h3>
+              <div class="blog-related-grid">
+                <a href="blog-detail.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0f1a2e,#1a2a4a);">🔍</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">SEO</div><div class="blog-related-title">10 On-Page SEO Mistakes Indian Businesses Make</div></div>
+                </a>
+                <a href="blog-detail-7.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0a1a0a,#1a2e1a);">⚡</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">SEO</div><div class="blog-related-title">Website Speed Optimisation Guide for India</div></div>
+                </a>
+                <a href="blog-detail-8.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#1a0a1a,#2a1a2a);">🔄</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">Business</div><div class="blog-related-title">5 Signs Your Website Needs a Redesign Now</div></div>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+          <aside class="blog-sidebar reveal reveal-delay-2">
+            <div class="sb-cta">
+              <div class="sb-cta-icon">📱</div>
+              <h4>Get a Mobile-First Website</h4>
+              <p>Every website we build is fully responsive and tested on real Indian mobile devices before launch.</p>
+              <a href="contact.html" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;margin-top:4px;">Get a Free Quote</a>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">Related Services</div>
+              <div class="sb-widget-body">
+                <a href="responsive-website-design.html" class="sb-link">Responsive Website Design</a>
+                <a href="website-designing-services.html" class="sb-link">Website Designing Services</a>
+                <a href="website-redesign-services.html" class="sb-link">Website Redesign</a>
+                <a href="wordpress-website-design-services.html" class="sb-link">WordPress Design</a>
+                <a href="website-design-cost-india.html" class="sb-link">View Pricing Guide</a>
+              </div>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">More Articles</div>
+              <div class="sb-widget-body">
+                <a href="blog-detail.html" class="sb-link">10 SEO Mistakes to Avoid</a>
+                <a href="blog-detail-7.html" class="sb-link">Website Speed Guide</a>
+                <a href="blog-detail-6.html" class="sb-link">Website Design Cost India</a>
+                <a href="blog-detail-8.html" class="sb-link">5 Signs You Need a Redesign</a>
+                <a href="blog-detail-4.html" class="sb-link">Reduce Cart Abandonment</a>
+                <a href="blog.html" class="sb-link" style="color:var(--gold);margin-top:4px;">← All Blog Posts</a>
+              </div>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">Newsletter</div>
+              <div class="sb-widget-body" style="padding:16px 14px;">
+                <p style="font-size:.82rem;color:#888;margin-bottom:14px;line-height:1.6;">Weekly web design &amp; SEO tips. No spam.</p>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <input type="email" placeholder="your@email.com" style="padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;font-family:'Outfit',sans-serif;font-size:.84rem;color:#fff;outline:none;" />
+                  <button style="padding:10px;background:var(--gold);color:#0a0a0a;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;">Subscribe →</button>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+    <section style="padding-bottom:80px;">
+      <div class="cta-section reveal">
+        <div class="section-label" style="margin-bottom:16px;">Fix Your Mobile Website Today</div>
+        <h2>Get a Website That Works <em>Perfectly on Every Device</em></h2>
+        <p>Our responsive website designs are built mobile-first — ensuring you capture every smartphone user who searches for your business anywhere in India.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-arrow">Get a Free Consultation</a>
+          <a href="responsive-website-design.html" class="btn btn-outline">Responsive Design Service</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:hello@yourbrand.in">hello@yourbrand.in</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="website-design-portfolio.html">Portfolio</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="website-designing-services.html">Website Designing</a></li>
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Design</a></li>
+            <li><a href="custom-website-design.html">Custom Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Legal</div>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      document.getElementById('readingProgress').style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>

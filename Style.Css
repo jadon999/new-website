@@ -188,11 +188,13 @@ section { padding: var(--section-pad) 0; }
   padding: 0 24px;
 }
 .nav-logo {
-  font-family: var(--font-display);
+  /* font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--white);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
+  width: 106px;
+  height: auto;
 }
 .nav-logo span { color: var(--gold); }
 .nav-links {
@@ -1046,11 +1048,12 @@ section { padding: var(--section-pad) 0; }
   margin-bottom: 60px;
 }
 .footer-brand-logo {
-  font-family: var(--font-display);
+  /* font-family: var(--font-display);
   font-size: 1.7rem;
   font-weight: 600;
   color: var(--white);
-  margin-bottom: 14px;
+  margin-bottom: 14px; */
+  width: 86px;
 }
 .footer-brand-logo span { color: var(--gold); }
 .footer-brand-desc {

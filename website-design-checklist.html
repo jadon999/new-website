@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design Checklist 2024 — 25 Must-Haves | YourBrand Blog</title>
+  <meta name="description" content="Before you launch your new website, run through this 25-point checklist used by professional web designers to ensure nothing critical is missing from your business website." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/website-design-checklist.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-detail-wrap{padding:130px 0 80px}
+    .blog-detail-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+    .blog-hero-img{width:100%;aspect-ratio:16/7;border-radius:10px;border:1px solid rgba(255,255,255,0.07);overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:36px;position:relative}
+    .blog-hero-emoji{font-size:7rem;opacity:0.08;user-select:none}
+    .blog-hero-badge{position:absolute;bottom:18px;left:20px;padding:4px 14px;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.28);border-radius:100px;backdrop-filter:blur(8px)}
+    .blog-meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.07)}
+    .blog-cat-pill{padding:4px 12px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.2);border-radius:100px}
+    .blog-meta-info{display:flex;align-items:center;gap:6px;font-size:.75rem;color:#888}
+    .blog-post-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:500;color:#fff;line-height:1.2;margin-bottom:18px}
+    .blog-post-intro{font-size:1.05rem;color:#d4d4d4;line-height:1.8;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.07)}
+    .blog-toc{background:#161616;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:20px 22px;margin-bottom:36px}
+    .blog-toc-title{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+    .blog-toc-list{display:flex;flex-direction:column;gap:8px;list-style:none;padding:0;margin:0}
+    .blog-toc-item{display:flex;gap:10px;font-size:.84rem;color:#888;line-height:1.5}
+    .blog-toc-num{font-size:.62rem;color:var(--gold);font-weight:700;flex-shrink:0;margin-top:3px}
+    .blog-toc-item a{color:#888;text-decoration:none;transition:color .2s}
+    .blog-toc-item a:hover{color:var(--gold)}
+    .blog-body{line-height:1.85}
+    .blog-body h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:500;color:#fff;margin:44px 0 14px;padding-top:4px}
+    .blog-body h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:500;color:#fff;margin:28px 0 10px}
+    .blog-body p{font-size:.96rem;color:#d4d4d4;line-height:1.85;margin-bottom:16px}
+    .blog-body ul,.blog-body ol{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px}
+    .blog-body ul li,.blog-body ol li{display:flex;align-items:flex-start;gap:10px;font-size:.94rem;color:#d4d4d4;line-height:1.75}
+    .blog-body ul li::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
+    .blog-body ol{counter-reset:blog-ol}
+    .blog-body ol li{counter-increment:blog-ol}
+    .blog-body ol li::before{content:counter(blog-ol);display:flex;align-items:center;justify-content:center;width:22px;height:22px;min-width:22px;border-radius:50%;background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.25);color:var(--gold);font-size:.68rem;font-weight:700;flex-shrink:0;margin-top:1px}
+    .blog-body strong{color:#fff;font-weight:600}
+    .blog-body a{color:var(--gold);transition:opacity .2s}
+    .blog-body a:hover{opacity:.75}
+    .blog-callout{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.18);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;margin:28px 0;font-size:.93rem;color:#d4d4d4;line-height:1.75}
+    .blog-callout strong{color:var(--gold)}
+    .blog-warning{background:rgba(255,80,80,.05);border:1px solid rgba(255,80,80,.2);border-left:3px solid #ff5050;border-radius:0 8px 8px 0;padding:18px 22px;margin:28px 0;font-size:.91rem;color:#d4d4d4;line-height:1.75}
+    .blog-warning strong{color:#ff6b6b}
+    .blog-hr{border:none;border-top:1px solid rgba(255,255,255,.07);margin:36px 0}
+    /* checklist item */
+    .checklist-item{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:#161616;border:1px solid rgba(255,255,255,.06);border-radius:8px;margin-bottom:10px;transition:border-color .2s}
+    .checklist-item:hover{border-color:rgba(200,169,110,.25)}
+    .check-box{width:22px;height:22px;border:2px solid rgba(200,169,110,.4);border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}
+    .check-box.done{background:var(--gold);border-color:var(--gold)}
+    .check-box.done::after{content:'✓';font-size:.75rem;color:#0a0a0a;font-weight:700}
+    .checklist-text h5{font-size:.93rem;font-weight:600;color:#fff;margin-bottom:3px}
+    .checklist-text p{font-size:.82rem;color:#888;line-height:1.6;margin:0}
+    .checklist-progress{background:#111;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .checklist-progress-bar-wrap{flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+    .checklist-progress-bar{height:100%;background:linear-gradient(90deg,var(--gold),#e0c48a);border-radius:3px;transition:width .4s ease;width:0%}
+    .checklist-progress-label{font-size:.75rem;color:#888;white-space:nowrap}
+    .checklist-progress-label span{color:var(--gold);font-weight:700}
+    .blog-author{display:flex;align-items:center;gap:18px;background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:24px 26px;margin-top:44px}
+    .blog-author-avatar{width:54px;height:54px;border-radius:50%;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:var(--gold);font-weight:600;flex-shrink:0}
+    .blog-author-name{font-size:.93rem;font-weight:700;color:#fff;margin-bottom:2px}
+    .blog-author-role{font-size:.72rem;color:var(--gold);margin-bottom:6px}
+    .blog-author-bio{font-size:.82rem;color:#888;line-height:1.6}
+    .blog-share{display:flex;align-items:center;gap:10px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
+    .blog-share-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888}
+    .blog-share-btn{padding:7px 14px;border-radius:4px;border:1px solid rgba(255,255,255,.07);font-size:.72rem;font-weight:600;color:#888;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+    .blog-share-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .blog-related{margin-top:52px}
+    .blog-related-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .blog-related-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:500;color:#fff;margin-bottom:24px}
+    .blog-related-heading em{color:var(--gold);font-style:italic}
+    .blog-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .blog-related-card{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;transition:all .3s ease;text-decoration:none;display:block}
+    .blog-related-card:hover{border-color:rgba(200,169,110,.25);transform:translateY(-3px);box-shadow:0 0 30px rgba(200,169,110,.1)}
+    .blog-related-thumb{height:90px;display:flex;align-items:center;justify-content:center;font-size:2rem;opacity:.12}
+    .blog-related-body{padding:12px 14px 14px}
+    .blog-related-cat{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+    .blog-related-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:.93rem;font-weight:500;color:#d4d4d4;line-height:1.35;transition:color .2s}
+    .blog-related-card:hover .blog-related-title{color:var(--gold)}
+    .blog-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:22px}
+    .sb-cta{background:linear-gradient(160deg,#161616 0%,rgba(200,169,110,.07) 100%);border:1px solid rgba(200,169,110,.2);border-radius:10px;padding:26px 22px;text-align:center;position:relative;overflow:hidden}
+    .sb-cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .sb-cta-icon{font-size:1.8rem;margin-bottom:10px}
+    .sb-cta h4{font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px}
+    .sb-cta p{font-size:.8rem;color:#888;line-height:1.6;margin-bottom:16px}
+    .sb-widget{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+    .sb-widget-head{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.63rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .sb-widget-body{padding:8px 10px}
+    .sb-link{display:block;padding:9px 10px;border-radius:4px;font-size:.82rem;color:#d4d4d4;text-decoration:none;transition:all .2s}
+    .sb-link:hover{background:rgba(200,169,110,.07);color:var(--gold)}
+    .reading-progress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,var(--gold),#e0c48a);z-index:9999;transition:width .1s linear}
+    @media(max-width:1100px){.blog-detail-grid{grid-template-columns:1fr}.blog-sidebar{position:static}}
+    @media(max-width:640px){.blog-related-grid{grid-template-columns:1fr}.blog-author{flex-direction:column;text-align:center}.blog-detail-wrap{padding:110px 0 60px}}
+  </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Website Design Checklist 2024 — 25 Things Every Business Website Must Have","datePublished":"2024-12-05","author":{"@type":"Organization","name":"YourBrand","url":"https://yourbrand.in"},"publisher":{"@type":"Organization","name":"YourBrand","url":"https://yourbrand.in"},"mainEntityOfPage":"https://yourbrand.in/blog-detail-2.html"}
+  </script>
+</head>
+<body>
+
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a><a href="website-designing-services.html">Services</a>
+    <a href="blog.html">Blog</a><a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a><a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+    <div class="blog-detail-wrap">
+      <div class="container">
+
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb" style="margin-bottom:32px;">
+          <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+          <a href="blog.html">Blog</a><span class="breadcrumb-sep">›</span>
+          <span>Website Design Checklist 2024</span>
+        </nav>
+
+        <div class="blog-detail-grid">
+
+          <!-- ════ ARTICLE ════ -->
+          <article>
+
+            <div class="blog-hero-img reveal" style="background:linear-gradient(135deg,#1a0f2e 0%,#2a1a4a 100%);">
+              <div class="blog-hero-emoji">🎨</div>
+              <div class="blog-hero-badge">Web Design</div>
+            </div>
+
+            <div class="blog-meta-row reveal">
+              <span class="blog-cat-pill">Web Design</span>
+              <div class="blog-meta-info"><span>📅</span><span>5 December 2024</span></div>
+              <div class="blog-meta-info"><span>⏱️</span><span>9 min read</span></div>
+              <div class="blog-meta-info"><span>✍️</span><span>YourBrand Team</span></div>
+            </div>
+
+            <h1 class="blog-post-title reveal">Website Design Checklist 2024 — 25 Things Every Business Website Must Have</h1>
+            <p class="blog-post-intro reveal">Before you launch your new website — or audit your existing one — run through this interactive 25-point checklist used by professional web designers to ensure nothing critical is missing. Tick each item as you go and watch your progress.</p>
+
+            <div class="blog-toc reveal">
+              <div class="blog-toc-title">Checklist Categories</div>
+              <ul class="blog-toc-list">
+                <li class="blog-toc-item"><span class="blog-toc-num">A</span><a href="#design">Design &amp; Branding (5 items)</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">B</span><a href="#content">Content &amp; Messaging (5 items)</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">C</span><a href="#technical">Technical &amp; Performance (5 items)</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">D</span><a href="#seo">SEO Foundations (5 items)</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">E</span><a href="#conversion">Conversion &amp; Lead Generation (5 items)</a></li>
+              </ul>
+            </div>
+
+            <div class="blog-body reveal">
+
+              <p>Whether you're launching a brand-new website or reviewing an existing one, this checklist covers the 25 elements that professional web designers verify before any website goes live. Miss even 3–4 of these and your website is likely underperforming significantly — costing you leads and credibility every day.</p>
+
+              <!-- Progress bar -->
+              <div class="checklist-progress" id="checklistProgress">
+                <div>
+                  <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Your Progress</div>
+                  <div class="checklist-progress-label"><span id="doneCount">0</span> of 25 items checked</div>
+                </div>
+                <div class="checklist-progress-bar-wrap">
+                  <div class="checklist-progress-bar" id="progressBar"></div>
+                </div>
+              </div>
+
+              <!-- SECTION A -->
+              <h2 id="design">A — Design &amp; Branding</h2>
+              <p>First impressions are formed in milliseconds. These 5 design elements determine whether visitors instantly trust and recognise your brand.</p>
+
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>1. Consistent brand colours and fonts throughout</h5>
+                  <p>Your exact brand colour palette and typography are used consistently on every page — no off-brand colours, no inconsistent fonts between pages.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>2. High-quality logo (SVG or 2x PNG)</h5>
+                  <p>Your logo displays crisp and sharp on all screen sizes and retina displays — not blurry or pixelated on any device.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>3. Professional, on-brand imagery</h5>
+                  <p>All photos and illustrations are high quality and aligned with your brand. No blurry stock photos that undermine credibility with visitors.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>4. Consistent spacing and alignment</h5>
+                  <p>Elements are evenly spaced, properly aligned, and visually balanced on all pages — nothing feels cramped, overflowing, or misaligned.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>5. Favicon set up</h5>
+                  <p>A small branded icon appears in browser tabs, bookmarks, and on mobile home screens when users save your website to their device.</p>
+                </div>
+              </div>
+
+              <!-- SECTION B -->
+              <h2 id="content">B — Content &amp; Messaging</h2>
+              <p>The content on your website either builds confidence or destroys it. These 5 items ensure your messaging is clear, credible, and compelling.</p>
+
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>6. Clear value proposition on the homepage</h5>
+                  <p>Within 5 seconds of landing, visitors understand exactly what you do, who you help, and why they should choose you over every competitor.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>7. Zero placeholder text anywhere</h5>
+                  <p>Absolutely no "Lorem ipsum," "Your text here," or filler content anywhere on the live website. Every word is intentional and real.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>8. Copy has been proofread end-to-end</h5>
+                  <p>All text has been proofread for spelling, grammar, and clarity. Errors in copy instantly damage business credibility and trust.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>9. About page with genuine information</h5>
+                  <p>A real, humanising about page that tells your story, introduces your team (where relevant), and builds trust with potential customers visiting for the first time.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>10. Current and correct contact information</h5>
+                  <p>Your phone number, email address, and physical address (if applicable) are up-to-date, correct, and easy to find on every page of your website.</p>
+                </div>
+              </div>
+
+              <div class="blog-callout"><strong>Quick Test:</strong> Have someone completely unfamiliar with your business visit your homepage for the first time. After just 10 seconds, ask them: what does this business do and who do they serve? If they struggle to answer clearly, your messaging needs significant work before launch.</div>
+
+              <!-- SECTION C -->
+              <h2 id="technical">C — Technical &amp; Performance</h2>
+              <p>Technical issues silently kill good websites. These 5 checks ensure your website actually works the way it should for all visitors.</p>
+
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>11. SSL certificate active — HTTPS in address bar</h5>
+                  <p>The padlock icon shows in the browser bar. Without SSL, browsers display "Not Secure" warnings and Google ranks you lower. This is non-negotiable in 2024.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>12. Fully responsive on mobile and tablet</h5>
+                  <p>Tested and verified on iPhone, Android, and multiple tablet sizes. Nothing is broken, cut off, or difficult to interact with on any screen size.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>13. Page load time under 3 seconds</h5>
+                  <p>Verified using Google PageSpeed Insights. Both mobile and desktop scores are measured and improved. Anything over 3 seconds costs you visitors and rankings.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>14. No broken links or 404 errors</h5>
+                  <p>Every internal and external link on your website leads to a working page. Broken links damage both user experience and your SEO performance significantly.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>15. Cross-browser compatible</h5>
+                  <p>Your website displays and functions correctly in Chrome, Safari, Firefox, and Edge — the four most commonly used browsers by Indian internet users.</p>
+                </div>
+              </div>
+
+              <!-- SECTION D -->
+              <h2 id="seo">D — SEO Foundations</h2>
+              <p>Without these 5 basics, even a beautifully designed website will struggle to rank on Google and attract organic traffic.</p>
+
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>16. Unique title tags on every page</h5>
+                  <p>Every page has a distinct, keyword-relevant title tag between 50–60 characters. No two pages share the same title. See our guide on <a href="blog-detail.html">common SEO mistakes</a> to understand why this matters.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>17. Meta descriptions written for every page</h5>
+                  <p>Compelling, unique meta descriptions of 140–160 characters that accurately describe each page and encourage real people to click from Google search results.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>18. Correct H1 structure — one per page</h5>
+                  <p>Each page has exactly one H1 containing the primary keyword, followed by a logical H2 and H3 hierarchy that structures all the content on the page.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>19. XML sitemap submitted to Google</h5>
+                  <p>An up-to-date XML sitemap is submitted via Google Search Console so all your pages are properly discovered and indexed by Google without delay.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>20. Google Analytics and Search Console connected</h5>
+                  <p>Both tools are properly set up and verified — enabling you to track traffic, understand rankings, and make data-informed decisions from your very first day live.</p>
+                </div>
+              </div>
+
+              <!-- SECTION E -->
+              <h2 id="conversion">E — Conversion &amp; Lead Generation</h2>
+              <p>These 5 items are what separate a beautiful-but-useless website from one that actually generates leads and revenue for your business.</p>
+
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>21. Clear call-to-action on every key page</h5>
+                  <p>Every page guides visitors toward a specific next step — whether that's calling you, filling in a form, making a purchase, or booking a free consultation.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>22. Contact form tested and confirmed working</h5>
+                  <p>Your contact form has been submitted and the delivery to your email verified. Forms that silently fail are more common than you think — and cost you every enquiry.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>23. Phone number is click-to-call on mobile</h5>
+                  <p>On smartphones, your phone number is a clickable tel: link that instantly initiates a call — reducing friction for the majority of Indian users browsing on mobile.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>24. Social proof is prominently visible</h5>
+                  <p>Client testimonials, Google reviews, case studies, industry certifications, or trust badges are displayed prominently to build confidence with first-time visitors.</p>
+                </div>
+              </div>
+              <div class="checklist-item" onclick="toggleCheck(this)">
+                <div class="check-box"></div>
+                <div class="checklist-text">
+                  <h5>25. Privacy policy page exists and is linked</h5>
+                  <p>A privacy policy is legally required if you collect any visitor data (contact forms, analytics, cookies) and is expected by customers who take their data privacy seriously.</p>
+                </div>
+              </div>
+
+              <div class="blog-callout" style="margin-top:32px;"><strong>How to Use This Checklist:</strong> Go through every item on your current website right now. For each one that fails — make a note and prioritise the fix. If you'd like a professional to audit your website against this checklist, <a href="contact.html">contact our team</a> for a free website review — no strings attached.</div>
+
+            </div>
+
+            <!-- Share -->
+            <div class="blog-share reveal">
+              <span class="blog-share-label">Share this:</span>
+              <button class="blog-share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href))">LinkedIn</button>
+              <button class="blog-share-btn" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href))">WhatsApp</button>
+              <button class="blog-share-btn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',2000)">Copy Link</button>
+            </div>
+
+            <!-- Author -->
+            <div class="blog-author reveal">
+              <div class="blog-author-avatar">YB</div>
+              <div>
+                <div class="blog-author-name">YourBrand Editorial Team</div>
+                <div class="blog-author-role">Website Design Experts — India</div>
+                <p class="blog-author-bio">We use this exact checklist on every website we deliver to clients. 8+ years of professional website design experience across India — 350+ websites launched.</p>
+              </div>
+            </div>
+
+            <!-- Related -->
+            <div class="blog-related reveal">
+              <div class="gold-line"></div>
+              <p class="blog-related-label">Continue Reading</p>
+              <h3 class="blog-related-heading">More <em>Articles You'll Find Useful</em></h3>
+              <div class="blog-related-grid">
+                <a href="blog-detail.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0f1a2e,#1a2a4a);">🔍</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">SEO</div><div class="blog-related-title">10 On-Page SEO Mistakes Indian Businesses Make</div></div>
+                </a>
+                <a href="blog-detail-3.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0f1f14,#1a3020);">⚙️</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">WordPress</div><div class="blog-related-title">WordPress vs Custom Website — Which is Better?</div></div>
+                </a>
+                <a href="blog-detail-5.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0f1e2e,#1a3040);">📱</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">Web Design</div><div class="blog-related-title">Why Your Mobile Website Is Losing You Customers</div></div>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- ════ SIDEBAR ════ -->
+          <aside class="blog-sidebar reveal reveal-delay-2">
+            <div class="sb-cta">
+              <div class="sb-cta-icon">✅</div>
+              <h4>Get All 25 Items Right</h4>
+              <p>We build every website with this full checklist verified before launch. Get a free consultation today.</p>
+              <a href="contact.html" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;margin-top:4px;">Get a Free Quote</a>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">Related Services</div>
+              <div class="sb-widget-body">
+                <a href="website-designing-services.html" class="sb-link">Website Designing Services</a>
+                <a href="custom-website-design.html" class="sb-link">Custom Website Design</a>
+                <a href="website-redesign-services.html" class="sb-link">Website Redesign</a>
+                <a href="responsive-website-design.html" class="sb-link">Responsive Design</a>
+                <a href="website-design-cost-india.html" class="sb-link">View Pricing Guide</a>
+              </div>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">More Articles</div>
+              <div class="sb-widget-body">
+                <a href="blog-detail.html" class="sb-link">10 SEO Mistakes to Avoid</a>
+                <a href="blog-detail-3.html" class="sb-link">WordPress vs Custom Website</a>
+                <a href="blog-detail-6.html" class="sb-link">Website Design Cost India</a>
+                <a href="blog-detail-8.html" class="sb-link">5 Signs You Need a Redesign</a>
+                <a href="blog-detail-7.html" class="sb-link">Website Speed Guide</a>
+                <a href="blog.html" class="sb-link" style="color:var(--gold);margin-top:4px;">← All Blog Posts</a>
+              </div>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">Newsletter</div>
+              <div class="sb-widget-body" style="padding:16px 14px;">
+                <p style="font-size:.82rem;color:#888;margin-bottom:14px;line-height:1.6;">Weekly web design &amp; SEO tips. No spam.</p>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <input type="email" placeholder="your@email.com" style="padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;font-family:'Outfit',sans-serif;font-size:.84rem;color:#fff;outline:none;" />
+                  <button style="padding:10px;background:var(--gold);color:#0a0a0a;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;">Subscribe →</button>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+    <section style="padding-bottom:80px;">
+      <div class="cta-section reveal">
+        <div class="section-label" style="margin-bottom:16px;">Build It Right</div>
+        <h2>Get a Website That Passes <em>Every Item</em> on This List</h2>
+        <p>Every website we design and build is verified against this checklist and more before launch — so you go live with complete confidence and a strong foundation for growth.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-arrow">Get a Free Consultation</a>
+          <a href="website-designing-services.html" class="btn btn-outline">Our Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:hello@yourbrand.in">hello@yourbrand.in</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="website-design-portfolio.html">Portfolio</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Core Services</div>
+          <ul class="footer-links">
+            <li><a href="website-designing-services.html">Website Designing Services</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Website Design</a></li>
+            <li><a href="custom-website-design.html">Custom Website Design</a></li>
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Legal</div>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Reading progress bar
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      document.getElementById('readingProgress').style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+
+    // Interactive checklist
+    let doneCount = 0;
+    function toggleCheck(item) {
+      const box = item.querySelector('.check-box');
+      const wasDone = box.classList.contains('done');
+      box.classList.toggle('done');
+      doneCount += wasDone ? -1 : 1;
+      document.getElementById('doneCount').textContent = doneCount;
+      document.getElementById('progressBar').style.width = (doneCount / 25 * 100) + '%';
+    }
+  </script>
+</body>
+</html>

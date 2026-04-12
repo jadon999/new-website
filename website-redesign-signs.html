@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Signs Your Business Website Needs a Redesign Right Now | YourBrand Blog</title>
+  <meta name="description" content="An outdated website is actively costing you business every day. These 5 warning signs tell you it's time to invest in a professional redesign before you lose more customers to competitors." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourbrand.in/blog-detail-8.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-detail-wrap{padding:130px 0 80px}
+    .blog-detail-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+    .blog-hero-img{width:100%;aspect-ratio:16/7;border-radius:10px;border:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:36px;position:relative}
+    .blog-hero-emoji{font-size:7rem;opacity:.08;user-select:none}
+    .blog-hero-badge{position:absolute;bottom:18px;left:20px;padding:4px 14px;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.28);border-radius:100px;backdrop-filter:blur(8px)}
+    .blog-meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .blog-cat-pill{padding:4px 12px;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.2);border-radius:100px}
+    .blog-meta-info{display:flex;align-items:center;gap:6px;font-size:.75rem;color:#888}
+    .blog-post-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:500;color:#fff;line-height:1.2;margin-bottom:18px}
+    .blog-post-intro{font-size:1.05rem;color:#d4d4d4;line-height:1.8;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .blog-toc{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:20px 22px;margin-bottom:36px}
+    .blog-toc-title{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+    .blog-toc-list{display:flex;flex-direction:column;gap:8px;list-style:none;padding:0;margin:0}
+    .blog-toc-item{display:flex;gap:10px;font-size:.84rem;color:#888;line-height:1.5}
+    .blog-toc-num{font-size:.62rem;color:var(--gold);font-weight:700;flex-shrink:0;margin-top:3px}
+    .blog-toc-item a{color:#888;text-decoration:none;transition:color .2s}
+    .blog-toc-item a:hover{color:var(--gold)}
+    .blog-body{line-height:1.85}
+    .blog-body h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:500;color:#fff;margin:44px 0 14px;padding-top:4px}
+    .blog-body h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:500;color:#fff;margin:28px 0 10px}
+    .blog-body p{font-size:.96rem;color:#d4d4d4;line-height:1.85;margin-bottom:16px}
+    .blog-body ul,.blog-body ol{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px}
+    .blog-body ul li,.blog-body ol li{display:flex;align-items:flex-start;gap:10px;font-size:.94rem;color:#d4d4d4;line-height:1.75}
+    .blog-body ul li::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
+    .blog-body ol{counter-reset:blog-ol}
+    .blog-body ol li{counter-increment:blog-ol}
+    .blog-body ol li::before{content:counter(blog-ol);display:flex;align-items:center;justify-content:center;width:22px;height:22px;min-width:22px;border-radius:50%;background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.25);color:var(--gold);font-size:.68rem;font-weight:700;flex-shrink:0;margin-top:1px}
+    .blog-body strong{color:#fff;font-weight:600}
+    .blog-body a{color:var(--gold);transition:opacity .2s}
+    .blog-body a:hover{opacity:.75}
+    .blog-callout{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.18);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;margin:28px 0;font-size:.93rem;color:#d4d4d4;line-height:1.75}
+    .blog-callout strong{color:var(--gold)}
+    .blog-warning{background:rgba(255,80,80,.05);border:1px solid rgba(255,80,80,.2);border-left:3px solid #ff5050;border-radius:0 8px 8px 0;padding:18px 22px;margin:28px 0;font-size:.91rem;color:#d4d4d4;line-height:1.75}
+    .blog-warning strong{color:#ff6b6b}
+    .blog-hr{border:none;border-top:1px solid rgba(255,255,255,.07);margin:36px 0}
+
+    /* Sign cards — big numbered */
+    .sign-big{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;margin-bottom:20px;transition:border-color .25s}
+    .sign-big:hover{border-color:rgba(200,169,110,.22)}
+    .sign-big-header{display:flex;align-items:center;gap:18px;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .sign-big-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:3.2rem;font-weight:600;color:rgba(200,169,110,.2);line-height:1;flex-shrink:0}
+    .sign-big-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:500;color:#fff;line-height:1.25}
+    .sign-big-body{padding:20px 24px}
+    .sign-big-body p{font-size:.93rem;color:#d4d4d4;line-height:1.8;margin-bottom:14px}
+    .sign-big-body p:last-child{margin-bottom:0}
+    .sign-big-body ul{margin:12px 0 0}
+    .sign-big-body ul li{font-size:.88rem;color:#888;line-height:1.7}
+    .sign-big-body ul li::before{width:5px;height:5px;margin-top:9px}
+
+    /* Self-check quiz */
+    .quiz-wrap{background:#111;border:1px solid rgba(200,169,110,.15);border-radius:10px;padding:24px;margin:32px 0}
+    .quiz-title{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .quiz-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .quiz-item:last-child{border-bottom:none;padding-bottom:0}
+    .quiz-check{width:20px;height:20px;border:1px solid rgba(200,169,110,.3);border-radius:4px;flex-shrink:0;margin-top:1px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:transparent}
+    .quiz-check.ticked{background:var(--gold);border-color:var(--gold);color:#0a0a0a;font-weight:700}
+    .quiz-text{font-size:.87rem;color:#888;line-height:1.6;cursor:pointer;user-select:none}
+    .quiz-result{margin-top:18px;padding:14px 16px;border-radius:6px;font-size:.88rem;font-weight:600;display:none;line-height:1.6}
+    .quiz-result.show{display:block}
+    .quiz-result.low{background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.2);color:#4ade80}
+    .quiz-result.mid{background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.2);color:#fbbf24}
+    .quiz-result.high{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);color:#ef4444}
+
+    /* Before/after comparison */
+    .before-after{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;margin:28px 0}
+    .ba-side{padding:22px 20px}
+    .ba-before{background:rgba(239,68,68,.04);border-right:1px solid rgba(255,255,255,.07)}
+    .ba-after{background:rgba(74,222,128,.04)}
+    .ba-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px}
+    .ba-before .ba-label{color:#ef4444}
+    .ba-after .ba-label{color:#4ade80}
+    .ba-item{display:flex;align-items:flex-start;gap:8px;font-size:.83rem;color:#888;line-height:1.6;margin-bottom:10px}
+    .ba-item:last-child{margin-bottom:0}
+    .ba-before .ba-item::before{content:'✗';color:#ef4444;flex-shrink:0;font-weight:700;font-size:.8rem}
+    .ba-after .ba-item::before{content:'✓';color:#4ade80;flex-shrink:0;font-weight:700;font-size:.8rem}
+
+    /* Cost calc box */
+    .cost-calc{background:linear-gradient(135deg,#161616 0%,rgba(200,169,110,.05) 100%);border:1px solid rgba(200,169,110,.18);border-radius:10px;padding:24px;margin:32px 0}
+    .cost-calc-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:500;color:#fff;margin-bottom:18px}
+    .cost-calc-title em{color:var(--gold);font-style:italic}
+    .cost-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .cost-row:last-child{border-bottom:none;padding-top:14px;margin-top:4px}
+    .cost-row-label{font-size:.88rem;color:#888}
+    .cost-row-val{font-size:.9rem;font-weight:700;color:#d4d4d4}
+    .cost-row.total .cost-row-label{color:#fff;font-weight:700;font-size:.9rem}
+    .cost-row.total .cost-row-val{color:#ef4444;font-size:1.1rem}
+
+    .blog-author{display:flex;align-items:center;gap:18px;background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:24px 26px;margin-top:44px}
+    .blog-author-avatar{width:54px;height:54px;border-radius:50%;background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:var(--gold);font-weight:600;flex-shrink:0}
+    .blog-author-name{font-size:.93rem;font-weight:700;color:#fff;margin-bottom:2px}
+    .blog-author-role{font-size:.72rem;color:var(--gold);margin-bottom:6px}
+    .blog-author-bio{font-size:.82rem;color:#888;line-height:1.6}
+    .blog-share{display:flex;align-items:center;gap:10px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
+    .blog-share-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888}
+    .blog-share-btn{padding:7px 14px;border-radius:4px;border:1px solid rgba(255,255,255,.07);font-size:.72rem;font-weight:600;color:#888;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+    .blog-share-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .blog-related{margin-top:52px}
+    .blog-related-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .blog-related-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:500;color:#fff;margin-bottom:24px}
+    .blog-related-heading em{color:var(--gold);font-style:italic}
+    .blog-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .blog-related-card{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;transition:all .3s ease;text-decoration:none;display:block}
+    .blog-related-card:hover{border-color:rgba(200,169,110,.25);transform:translateY(-3px);box-shadow:0 0 30px rgba(200,169,110,.1)}
+    .blog-related-thumb{height:90px;display:flex;align-items:center;justify-content:center;font-size:2rem;opacity:.12}
+    .blog-related-body{padding:12px 14px 14px}
+    .blog-related-cat{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+    .blog-related-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:.93rem;font-weight:500;color:#d4d4d4;line-height:1.35;transition:color .2s}
+    .blog-related-card:hover .blog-related-title{color:var(--gold)}
+    .blog-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:22px}
+    .sb-cta{background:linear-gradient(160deg,#161616 0%,rgba(200,169,110,.07) 100%);border:1px solid rgba(200,169,110,.2);border-radius:10px;padding:26px 22px;text-align:center;position:relative;overflow:hidden}
+    .sb-cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .sb-cta-icon{font-size:1.8rem;margin-bottom:10px}
+    .sb-cta h4{font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px}
+    .sb-cta p{font-size:.8rem;color:#888;line-height:1.6;margin-bottom:16px}
+    .sb-widget{background:#161616;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+    .sb-widget-head{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.63rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .sb-widget-body{padding:8px 10px}
+    .sb-link{display:block;padding:9px 10px;border-radius:4px;font-size:.82rem;color:#d4d4d4;text-decoration:none;transition:all .2s}
+    .sb-link:hover{background:rgba(200,169,110,.07);color:var(--gold)}
+    .reading-progress{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,var(--gold),#e0c48a);z-index:9999;transition:width .1s linear}
+    @media(max-width:1100px){.blog-detail-grid{grid-template-columns:1fr}.blog-sidebar{position:static}}
+    @media(max-width:768px){.before-after{grid-template-columns:1fr}.ba-before{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}}
+    @media(max-width:640px){.blog-related-grid{grid-template-columns:1fr}.blog-author{flex-direction:column;text-align:center}.blog-detail-wrap{padding:110px 0 60px}.sign-big-header{flex-direction:column;gap:8px}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"5 Signs Your Business Website Needs a Redesign Right Now","datePublished":"2024-10-25","author":{"@type":"Organization","name":"YourBrand","url":"https://yourbrand.in"},"publisher":{"@type":"Organization","name":"YourBrand","url":"https://yourbrand.in"},"mainEntityOfPage":"https://yourbrand.in/blog-detail-8.html"}</script>
+</head>
+<body>
+
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your<span>Brand</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="website-designing-services.html">Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="website-designing-services.html">Website Designing Services</a>
+            <a href="wordpress-website-design-services.html">WordPress Website Design</a>
+            <a href="custom-website-design.html">Custom Website Design</a>
+            <a href="responsive-website-design.html">Responsive Website Design</a>
+            <a href="landing-page-design-services.html">Landing Page Design</a>
+            <a href="business-website-design.html">Business Website Design</a>
+            <a href="small-business-website-design.html">Small Business Website</a>
+            <a href="ecommerce-website-design.html">Ecommerce Website Design</a>
+            <a href="website-redesign-services.html">Website Redesign</a>
+            <a href="static-website-design.html">Static Website Design</a>
+            <a href="dynamic-website-design.html">Dynamic Website Design</a>
+            <a href="portfolio-website-design.html">Portfolio Website Design</a>
+          </div>
+        </li>
+        <li><a href="website-design-cost-india.html">Pricing</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-gold nav-cta">Get a Free Quote</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a><a href="website-designing-services.html">Services</a>
+    <a href="blog.html">Blog</a><a href="website-design-cost-india.html">Pricing</a>
+    <a href="about.html">About</a><a href="contact.html">Contact</a>
+    <div class="mobile-sep"></div>
+    <a href="contact.html" class="btn btn-gold">Get a Free Quote</a>
+  </div>
+
+  <main>
+    <div class="blog-detail-wrap">
+      <div class="container">
+
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb" style="margin-bottom:32px;">
+          <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+          <a href="blog.html">Blog</a><span class="breadcrumb-sep">›</span>
+          <span>5 Signs You Need a Website Redesign</span>
+        </nav>
+
+        <div class="blog-detail-grid">
+
+          <article>
+
+            <div class="blog-hero-img reveal" style="background:linear-gradient(135deg,#1a0a1a 0%,#2e1a2e 100%);">
+              <div class="blog-hero-emoji">🔄</div>
+              <div class="blog-hero-badge">Business</div>
+            </div>
+
+            <div class="blog-meta-row reveal">
+              <span class="blog-cat-pill">Business</span>
+              <div class="blog-meta-info"><span>📅</span><span>25 October 2024</span></div>
+              <div class="blog-meta-info"><span>⏱️</span><span>6 min read</span></div>
+              <div class="blog-meta-info"><span>✍️</span><span>YourBrand Team</span></div>
+            </div>
+
+            <h1 class="blog-post-title reveal">5 Signs Your Business Website Needs a Redesign Right Now</h1>
+            <p class="blog-post-intro reveal">Most business owners wait far too long to redesign their website. An outdated, slow, or poorly performing website doesn't just fail to generate leads — it actively damages your brand credibility and costs you real business every single day. Here are the 5 clearest signs it's time to act.</p>
+
+            <div class="blog-toc reveal">
+              <div class="blog-toc-title">The 5 Signs</div>
+              <ul class="blog-toc-list">
+                <li class="blog-toc-item"><span class="blog-toc-num">01</span><a href="#sign1">Your Website Looks Outdated and Embarrassing</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">02</span><a href="#sign2">It Doesn't Work Properly on Mobile</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">03</span><a href="#sign3">It Generates No Leads or Enquiries</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">04</span><a href="#sign4">It Loads Too Slowly</a></li>
+                <li class="blog-toc-item"><span class="blog-toc-num">05</span><a href="#sign5">It No Longer Reflects Your Business</a></li>
+              </ul>
+            </div>
+
+            <div class="blog-body reveal">
+
+              <p>Your website was probably a real investment when you first had it built. At the time it may have looked great and done its job well. But the web moves fast — design trends evolve, technology changes, Google's requirements shift, and your business grows. A website that was impressive three years ago may be actively working against you today.</p>
+              <p>The difficult truth: while your outdated website sits there costing you credibility, your competitors' newer websites are making better first impressions on the same potential customers. Every day you delay a necessary redesign is a day you're at a real competitive disadvantage. Be honest as you read through these 5 signs.</p>
+
+              <!-- Interactive self-check quiz -->
+              <div class="quiz-wrap reveal">
+                <div class="quiz-title">Quick Self-Check — Tick Every One That Applies to Your Website</div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">My website looks visually dated compared to competitors I admire</div>
+                </div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">I feel a slight embarrassment when sharing my website URL with potential clients</div>
+                </div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">My website looks broken or difficult to use on my own smartphone</div>
+                </div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">I receive very few or no enquiries through my website contact form</div>
+                </div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">My website takes more than 3–4 seconds to load on mobile</div>
+                </div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">My services, pricing, or team have changed significantly since the site was built</div>
+                </div>
+                <div class="quiz-item" onclick="quizTick(this)">
+                  <div class="quiz-check">✓</div>
+                  <div class="quiz-text">My website hasn't been significantly updated in over 2 years</div>
+                </div>
+                <div id="quizResult" class="quiz-result">—</div>
+              </div>
+
+              <!-- Sign 1 -->
+              <div class="sign-big" id="sign1">
+                <div class="sign-big-header">
+                  <div class="sign-big-num">01</div>
+                  <div class="sign-big-title">Your Website Looks Outdated and Embarrassing</div>
+                </div>
+                <div class="sign-big-body">
+                  <p>This is the most obvious sign — and also the one business owners most consistently underestimate the impact of. Web design trends evolve significantly every 2–3 years. A website built in 2019 or 2020 with the design conventions of that era will look noticeably dated to visitors browsing it today in 2024.</p>
+                  <p>The problem isn't just aesthetics. When a potential customer visits your website and it looks old, they make unconscious — but powerful — judgements:</p>
+                  <ul>
+                    <li>Is this business still active and investing in itself?</li>
+                    <li>Are they successful enough to afford a professional online presence?</li>
+                    <li>Should I trust them with my money or project?</li>
+                  </ul>
+                  <p>If the website looks neglected, the customer assumes other aspects of the business might be too. A striking statistic: <strong>75% of consumers judge a company's credibility based on their website design</strong>. First impressions happen in milliseconds — and they happen before a single word is read.</p>
+                  <p><strong>The honest test:</strong> Ask someone who has never seen your website to browse it for 10 seconds and give you their first impression. If they hesitate, or if you feel anxious about their response — you have your answer.</p>
+                </div>
+              </div>
+
+              <!-- Sign 2 -->
+              <div class="sign-big" id="sign2">
+                <div class="sign-big-header">
+                  <div class="sign-big-num">02</div>
+                  <div class="sign-big-title">It Doesn't Work Properly on Mobile</div>
+                </div>
+                <div class="sign-big-body">
+                  <p>If your website wasn't built with modern responsive design — or was built before 2016 — there is a very high chance it delivers a broken or frustrating experience on smartphones. In India, where over 75% of internet traffic is mobile, this is not a minor inconvenience. It is a serious daily revenue problem.</p>
+
+                  <div class="before-after" style="margin:20px 0">
+                    <div class="ba-side ba-before">
+                      <div class="ba-label">Your Current Site — Mobile</div>
+                      <div class="ba-item">Horizontal scrolling required to see content</div>
+                      <div class="ba-item">Text too small to read without zooming</div>
+                      <div class="ba-item">Buttons too tiny to tap accurately</div>
+                      <div class="ba-item">Navigation menu doesn't collapse properly</div>
+                      <div class="ba-item">Contact form difficult to fill on phone</div>
+                    </div>
+                    <div class="ba-side ba-after">
+                      <div class="ba-label">After Redesign — Mobile</div>
+                      <div class="ba-item">Fluid layout that fits every screen perfectly</div>
+                      <div class="ba-item">16px+ font, readable without zooming</div>
+                      <div class="ba-item">Large thumb-friendly buttons and links</div>
+                      <div class="ba-item">Clean hamburger menu, easy one-hand use</div>
+                      <div class="ba-item">Short, easy-to-complete mobile forms</div>
+                    </div>
+                  </div>
+
+                  <p>Beyond the user experience issue, a non-mobile-friendly website directly damages your Google rankings. Google uses mobile-first indexing — it judges your entire website's quality primarily based on the mobile experience. A broken mobile experience means lower rankings, which means fewer visitors finding you in the first place. It's a compounding problem that worsens every month.</p>
+                </div>
+              </div>
+
+              <!-- Sign 3 -->
+              <div class="sign-big" id="sign3">
+                <div class="sign-big-header">
+                  <div class="sign-big-num">03</div>
+                  <div class="sign-big-title">It Generates No Leads or Enquiries</div>
+                </div>
+                <div class="sign-big-body">
+                  <p>This is perhaps the most financially damaging sign of all. If your website receives visitors — from Google, social media, or direct traffic — but generates few or no enquiries, something fundamental about your website's design, messaging, or user experience is failing to convert visitors into leads.</p>
+                  <p>Common conversion problems that typically require a redesign to fix properly:</p>
+                  <ul>
+                    <li><strong>Unclear value proposition:</strong> Visitors don't immediately understand what you do and why they should choose you over competitors</li>
+                    <li><strong>Weak or missing calls-to-action:</strong> No clear "next step" guiding visitors toward contacting you on any page</li>
+                    <li><strong>Contact form issues:</strong> Form is too long, too complicated, or — worst of all — silently failing to deliver enquiries to your email</li>
+                    <li><strong>No visible social proof:</strong> No testimonials, case studies, credentials, or trust signals to build confidence with first-time visitors</li>
+                    <li><strong>Poor navigation:</strong> Visitors can't easily find information about your services and give up before contacting you</li>
+                  </ul>
+                  <div class="blog-warning" style="margin:16px 0 0"><strong>⚠ Check This Right Now:</strong> When did you last submit your own contact form and verify it delivered to your email? Broken contact forms that silently discard every enquiry are more common than you'd believe — and mean you're losing leads you don't even know about. Test it today.</div>
+                </div>
+              </div>
+
+              <!-- Sign 4 -->
+              <div class="sign-big" id="sign4">
+                <div class="sign-big-header">
+                  <div class="sign-big-num">04</div>
+                  <div class="sign-big-title">It Loads Too Slowly</div>
+                </div>
+                <div class="sign-big-body">
+                  <p>A slow website costs your business in three simultaneous ways: visitors leave before seeing your content, your Google rankings suffer, and your conversion rates drop. If your website takes more than 3 seconds to load on a mobile connection — test using Google PageSpeed Insights right now — you have a speed problem that is costing you daily.</p>
+
+                  <div class="cost-calc">
+                    <div class="cost-calc-title">The Real Cost of a <em>Slow Website</em></div>
+                    <div class="cost-row">
+                      <span class="cost-row-label">Monthly visitors (example)</span>
+                      <span class="cost-row-val">1,000 visitors</span>
+                    </div>
+                    <div class="cost-row">
+                      <span class="cost-row-label">Mobile visitors (75%)</span>
+                      <span class="cost-row-val">750 mobile users</span>
+                    </div>
+                    <div class="cost-row">
+                      <span class="cost-row-label">Lost to slow load (30% abandon)</span>
+                      <span class="cost-row-val">225 lost visitors/month</span>
+                    </div>
+                    <div class="cost-row">
+                      <span class="cost-row-label">Annual lost potential customers</span>
+                      <span class="cost-row-val">2,700 people/year</span>
+                    </div>
+                    <div class="cost-row total">
+                      <span class="cost-row-label">At 5% conversion = leads lost annually</span>
+                      <span class="cost-row-val">135+ leads/year lost</span>
+                    </div>
+                  </div>
+
+                  <p>Sometimes a slow website can be fixed through technical optimisation without a full redesign. But often — especially with older websites built on heavy themes or accumulated plugin debt — a clean rebuild is the most efficient path to a fast, modern, high-performing website. See our complete <a href="blog-detail-7.html">website speed optimisation guide</a> to understand what's possible.</p>
+                </div>
+              </div>
+
+              <!-- Sign 5 -->
+              <div class="sign-big" id="sign5">
+                <div class="sign-big-header">
+                  <div class="sign-big-num">05</div>
+                  <div class="sign-big-title">It No Longer Reflects Your Business</div>
+                </div>
+                <div class="sign-big-body">
+                  <p>Businesses evolve — sometimes significantly. Services change. Teams grow. Positioning refines. Pricing moves upmarket. The business that built a basic website 4 years ago may now be serving a completely different client profile at a significantly higher level. If your website still describes your business as it was — rather than as it is — you have a credibility gap that is actively losing you better clients and higher-value work.</p>
+                  <p>Key indicators that your website no longer reflects your business:</p>
+                  <ul>
+                    <li>Your pricing or service offering has changed significantly since the site was originally built</li>
+                    <li>Your brand identity, logo, or visual language has evolved but the website still shows the old version</li>
+                    <li>You've added new services, product lines, or team members that aren't represented anywhere on the site</li>
+                    <li>You're now targeting a more premium or different customer segment than when the site was originally built</li>
+                    <li>Your business has expanded to new cities, markets, or industries that aren't reflected in the content</li>
+                    <li>You've won awards, certifications, or notable clients that would build credibility — but they're not showcased anywhere</li>
+                  </ul>
+                  <p>A website that shows who you <em>were</em> rather than who you <em>are</em> positions you for the wrong clients at the wrong price point — costing you better work every single day.</p>
+                </div>
+              </div>
+
+              <h2>What to Do Next</h2>
+              <p>If 2 or more of these 5 signs apply to your website, a redesign is not just worth considering — it's overdue. The question isn't whether to redesign. It's when, and with whom.</p>
+              <p>The longer you wait, the more business you lose to competitors whose websites are making a better first impression on the same potential customers you're both targeting. The cost of redesigning is almost always substantially less than the ongoing cost of not redesigning.</p>
+
+              <div class="blog-callout"><strong>The Investment Perspective:</strong> Our clients who redesign their websites consistently report significantly more enquiries, improved quality of leads, and better conversion rates within the first 3 months of launch. A professional website redesign pays for itself many times over. Start by getting a free, honest assessment of your current website from a professional — <a href="contact.html">contact our team today</a> and we'll review your existing website and tell you exactly what's holding it back, and what a redesign could realistically achieve for your business.</div>
+
+            </div>
+
+            <div class="blog-share reveal">
+              <span class="blog-share-label">Share this:</span>
+              <button class="blog-share-btn" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href))">LinkedIn</button>
+              <button class="blog-share-btn" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href))">WhatsApp</button>
+              <button class="blog-share-btn" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',2000)">Copy Link</button>
+            </div>
+
+            <div class="blog-author reveal">
+              <div class="blog-author-avatar">YB</div>
+              <div>
+                <div class="blog-author-name">YourBrand Editorial Team</div>
+                <div class="blog-author-role">Website Redesign Specialists — India</div>
+                <p class="blog-author-bio">We've redesigned hundreds of Indian business websites. Our redesign process is strategic, data-informed, and always focused on generating measurable business results — not just a new look.</p>
+              </div>
+            </div>
+
+            <div class="blog-related reveal">
+              <div class="gold-line"></div>
+              <p class="blog-related-label">Continue Reading</p>
+              <h3 class="blog-related-heading">More <em>Articles You'll Find Useful</em></h3>
+              <div class="blog-related-grid">
+                <a href="blog-detail-2.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#1a0f2e,#2a1a4a);">🎨</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">Web Design</div><div class="blog-related-title">Website Design Checklist 2024 — 25 Must-Haves</div></div>
+                </a>
+                <a href="blog-detail-6.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#1e1a0f,#302a1a);">💰</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">Business</div><div class="blog-related-title">Website Design Cost India — What You Should Pay</div></div>
+                </a>
+                <a href="blog-detail-5.html" class="blog-related-card">
+                  <div class="blog-related-thumb" style="background:linear-gradient(135deg,#0f1e2e,#1a3040);">📱</div>
+                  <div class="blog-related-body"><div class="blog-related-cat">Web Design</div><div class="blog-related-title">Why Your Mobile Website Is Losing You Customers</div></div>
+                </a>
+              </div>
+            </div>
+
+          </article>
+
+          <aside class="blog-sidebar reveal reveal-delay-2">
+            <div class="sb-cta">
+              <div class="sb-cta-icon">🔄</div>
+              <h4>Time for a Redesign?</h4>
+              <p>Get a free, honest website review and redesign quote. No obligation, no pressure.</p>
+              <a href="contact.html" class="btn btn-gold btn-arrow" style="width:100%;justify-content:center;margin-top:4px;">Get a Free Review</a>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">Redesign Services</div>
+              <div class="sb-widget-body">
+                <a href="website-redesign-services.html" class="sb-link">Website Redesign Services</a>
+                <a href="website-designing-services.html" class="sb-link">Full Website Design</a>
+                <a href="responsive-website-design.html" class="sb-link">Mobile-First Design</a>
+                <a href="wordpress-website-design-services.html" class="sb-link">WordPress Redesign</a>
+                <a href="website-design-cost-india.html" class="sb-link">View Pricing Guide</a>
+              </div>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">More Articles</div>
+              <div class="sb-widget-body">
+                <a href="blog-detail-2.html" class="sb-link">Website Design Checklist</a>
+                <a href="blog-detail.html" class="sb-link">10 SEO Mistakes to Avoid</a>
+                <a href="blog-detail-6.html" class="sb-link">Website Design Cost India</a>
+                <a href="blog-detail-5.html" class="sb-link">Mobile Website Guide</a>
+                <a href="blog-detail-7.html" class="sb-link">Website Speed Guide</a>
+                <a href="blog.html" class="sb-link" style="color:var(--gold);margin-top:4px;">← All Blog Posts</a>
+              </div>
+            </div>
+            <div class="sb-widget">
+              <div class="sb-widget-head">Newsletter</div>
+              <div class="sb-widget-body" style="padding:16px 14px;">
+                <p style="font-size:.82rem;color:#888;margin-bottom:14px;line-height:1.6;">Weekly web design &amp; business tips. No spam.</p>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <input type="email" placeholder="your@email.com" style="padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;font-family:'Outfit',sans-serif;font-size:.84rem;color:#fff;outline:none;" />
+                  <button style="padding:10px;background:var(--gold);color:#0a0a0a;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;">Subscribe →</button>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+    <section style="padding-bottom:80px;">
+      <div class="cta-section reveal">
+        <div class="section-label" style="margin-bottom:16px;">Your Current Website Is Costing You Business</div>
+        <h2>Let's Redesign It Into a <em>Lead-Generating Asset</em></h2>
+        <p>Share your website URL with us and we'll give you a free, honest assessment of what's holding it back — and exactly what a professional redesign could realistically achieve for your business.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold btn-arrow">Get a Free Website Review</a>
+          <a href="website-redesign-services.html" class="btn btn-outline">Our Redesign Service</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">Your<span>Brand</span></div>
+          <p class="footer-brand-desc">Premium website designing services for businesses across India. Modern, responsive, and SEO-friendly websites built to grow your business.</p>
+          <div class="footer-contact-detail"><span>📧</span><a href="mailto:hello@yourbrand.in">hello@yourbrand.in</a></div>
+          <div class="footer-contact-detail"><span>📞</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div class="footer-contact-detail"><span>📍</span><span>India (Serving Clients Nationwide)</span></div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="website-design-portfolio.html">Portfolio</a></li>
+            <li><a href="website-design-cost-india.html">Pricing</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="website-redesign-services.html">Website Redesign</a></li>
+            <li><a href="website-designing-services.html">Website Designing</a></li>
+            <li><a href="responsive-website-design.html">Responsive Design</a></li>
+            <li><a href="business-website-design.html">Business Websites</a></li>
+            <li><a href="ecommerce-website-design.html">Ecommerce Design</a></li>
+            <li><a href="wordpress-website-design-services.html">WordPress Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Legal</div>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 <a href="index.html">YourBrand</a>. All rights reserved. | Professional Website Designing Services in India</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Reading progress
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      document.getElementById('readingProgress').style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+
+    // Interactive quiz
+    let tickCount = 0;
+    function quizTick(item) {
+      const box = item.querySelector('.quiz-check');
+      const ticked = box.classList.toggle('ticked');
+      tickCount += ticked ? 1 : -1;
+      const result = document.getElementById('quizResult');
+      if (tickCount === 0) {
+        result.className = 'quiz-result';
+        return;
+      }
+      result.classList.add('show');
+      if (tickCount <= 2) {
+        result.className = 'quiz-result show low';
+        result.textContent = `✓ ${tickCount}/7 — Your website may just need some optimisation rather than a full redesign. Still worth a professional review.`;
+      } else if (tickCount <= 4) {
+        result.className = 'quiz-result show mid';
+        result.textContent = `⚠ ${tickCount}/7 — Multiple warning signs present. A redesign would likely generate a meaningful improvement in leads and credibility.`;
+      } else {
+        result.className = 'quiz-result show high';
+        result.textContent = `✗ ${tickCount}/7 — Your website needs a redesign. It is almost certainly costing you business every day. Get a free review today.`;
+      }
+    }
+  </script>
+</body>
+</html>
